@@ -29,9 +29,6 @@ const HeroSection = () => {
               <BsClipboardCheck /> Compliance
             </div>
           </div>
-          <a href="#services" className="btn btn-primary mt-4">
-            Explore Our Services
-          </a>
         </div>
         <div className="hero-image">
           <img src={mapImage} alt="UNIVAL Hero" />

@@ -225,8 +225,13 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 770px) {
   .timeline-slider {
     padding: 40px 20px;
+  }
+
+  .nav-arrow-left,
+  .nav-arrow-right {
+    transform: translateY(30%);
   }
 }

@@ -128,3 +128,13 @@
         padding-top: 10px;
     }
 }
+
+@media (max-width: 576px) {
+    .advancing {
+        font-size: 0.6rem;
+    }
+
+    .custom-search-icon {
+        visibility: hidden;
+    }
+}

@@ -15,7 +15,7 @@ const Header = () => {
       {/* Top Mini Bar */}
       <div className="bg-dark-blue text-white py-2 small">
         <div className="container d-flex justify-content-between align-items-center">
-          <div className="text-end">ADVANCING THE PHARMACEUTICAL INDUSTRY</div>
+          <div className="advancing">ADVANCING THE PHARMACEUTICAL INDUSTRY</div>
 
           <div className="d-flex gap-3">
             <a

@@ -96,6 +96,12 @@
 @media (max-width: 576px) {
     .value-grid {
         grid-template-columns: 1fr;
+        gap: 0 !important;
+    }
+
+    .value-grid .box:not(:first-child) {
+        margin-top: -20px;
+        /* creates 2px overlap */
     }
 
     .span-2,

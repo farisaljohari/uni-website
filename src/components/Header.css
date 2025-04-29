@@ -1,0 +1,130 @@
+/* === Navbar Styling === */
+.navbar {
+    padding: 0 !important;
+}
+
+/* Navbar Background */
+.custom-navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #00458a;
+    /* Deep Unival blue bottom border */
+}
+
+/* Brand */
+.custom-brand {
+    color: #00458a;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Logo */
+.logo {
+    width: 200px;
+    height: 70px;
+    background-image: url("../assets/logo_UNIVAL.png");
+    /* Update your path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Nav Links */
+.custom-nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.custom-nav-links .custom-nav-link {
+    color: #00458a;
+    font-size: 19px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.custom-nav-links .custom-nav-link:hover,
+.custom-nav-links .custom-nav-link.active {
+    color: #ffd700;
+    /* Golden hover */
+}
+
+/* Dropdown */
+.custom-nav-dropdown .nav-link {
+    color: #555;
+    font-weight: 500;
+}
+
+.custom-nav-dropdown .dropdown-toggle::after {
+    display: none !important;
+}
+
+.custom-dropdown-item {
+    color: #555;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #00458a;
+}
+
+/* Search Icon */
+.custom-search-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+
+.custom-search-icon:hover {
+    background-color: rgba(0, 69, 138, 0.1);
+}
+
+/* Global Top Bar Colors */
+.bg-dark-blue {
+    background-color: #00458a;
+}
+
+.text-gold {
+    color: #ffd700;
+}
+
+.text-gold:hover {
+    color: white;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid #e0e0e0;
+        background-color: #f8f9fa;
+    }
+
+    .global-icon {
+        font-size: 1.5rem;
+    }
+
+    .language-text {
+        font-size: 1.1rem;
+    }
+
+    .custom-nav-links {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-nav-link {
+        font-size: 16px;
+    }
+
+    .navbar-collapse {
+        padding-top: 10px;
+    }
+}

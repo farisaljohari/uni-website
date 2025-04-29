@@ -1,0 +1,105 @@
+/* Section Background */
+.uba-value-section {
+    background: #f8fafc;
+    padding: 60px 0;
+}
+
+/* Text Styles */
+.desc {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Grid Layout */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.value-grid h3,
+.value-grid h4 {
+    color: #ffd700;
+}
+
+.box {
+    padding: 25px 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Span variants */
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.tall {
+    min-height: 220px;
+}
+
+/* Color Variants */
+.white-box {
+    background: #fff;
+}
+
+.dark-box {
+    background: #002b5b;
+    /* Dark blue matching hero */
+    color: white;
+}
+
+.gray-box {
+    background: #6c757d;
+    color: white;
+}
+
+.blue-box {
+    background: linear-gradient(145deg, #00458a, #0c6cd1);
+    color: white;
+}
+
+.bright-blue {
+    background: #007bff;
+    color: white;
+}
+
+.full-blue {
+    background: #00458a;
+    color: white;
+    padding: 30px;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .span-2,
+    .span-3 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .span-2,
+    .span-3 {
+        grid-column: span 1;
+    }
+}

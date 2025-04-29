@@ -1,0 +1,127 @@
+/* === Footer Section === */
+.uba-footer {
+    background-color: #00458a;
+    /* Unival Blue */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1 1 300px;
+}
+
+.logo-column .footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d1e4f2;
+    margin-bottom: 20px;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 12px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #ffd700;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #ffd700;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #d1e4f2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* === Footer Form === */
+.form-column .footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-form .form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer-form input,
+.footer-form textarea {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.footer-form button {
+    background-color: #ffd700;
+    color: #00458a;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-form button:hover {
+    background-color: #f3eab5;
+    color: #00458a;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+    background-color: #003366;
+    /* Darker blue */
+    padding: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: #cbd8e0;
+}

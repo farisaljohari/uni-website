@@ -66,6 +66,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero-section {
+        background: linear-gradient(150deg, var(--color-secondary), var(--color-secondary-g));
+
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;

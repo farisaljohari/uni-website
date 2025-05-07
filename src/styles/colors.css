@@ -3,7 +3,8 @@
     /* UniJO Blue */
     --color-primary-rgb: 0, 69, 138;
     /* RGB equivalent of UniJO Blue */
-    --color-secondary: #2596be;
+    --color-secondary: #3498db;
+    --color-secondary-rgb: 52, 152, 219;
     --color-secondary-g: #d5e3eb;
     /* Light Blue */
     --color-accent: #ffd700;

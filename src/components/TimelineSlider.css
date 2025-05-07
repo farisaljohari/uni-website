@@ -121,14 +121,14 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
+  background-color: var(--color-secondary-g);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .calendar-icon {
   font-size: 18px;
-  color: var(--color-accent);
+  color: var(--color-p);
 }
 
 /* === Navigation Arrows === */

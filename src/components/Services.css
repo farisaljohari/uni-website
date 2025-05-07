@@ -1,6 +1,8 @@
+@import "../styles/colors.css";
+
 /* Section Background */
 .services-section {
-    background: #f8fafc;
+    background: var(--color-light-gray);
     padding: 60px 0;
 }
 
@@ -36,12 +38,12 @@
 
 /* Overlay */
 .overlay {
-    background: rgba(0, 69, 138, 0.7);
+    background: rgba(var(--color-primary-rgb), 0.8);
     /* Dark blue transparent */
     width: 100%;
     height: 100%;
     padding: 20px;
-    color: white;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +52,7 @@
 }
 
 .service-card:hover .overlay {
-    background: rgba(0, 69, 138, 0.85);
+    background: rgba(var(--color-primary-rgb), 0.85);
     /* Darker on hover */
 }
 
@@ -59,7 +61,7 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ffd700;
+    color: var(--color-accent);
     /* Golden Title */
 }
 
@@ -78,7 +80,7 @@
 
 /* Pagination Dots */
 .swiper-pagination-bullet {
-    background: #0c6cd1;
+    background: var(--color-secondary);
     opacity: 0.4;
 }
 

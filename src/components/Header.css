@@ -1,3 +1,5 @@
+@import "../styles/colors.css";
+
 /* === Navbar Styling === */
 .navbar {
     padding: 0 !important;
@@ -5,14 +7,13 @@
 
 /* Navbar Background */
 .custom-navbar {
-    background-color: #ffffff;
-    border-bottom: 2px solid #00458a;
-    /* Deep Unival blue bottom border */
+    background-color: var(--color-white);
+    /* border-bottom: 2px solid var(--color-primary); */
 }
 
 /* Brand */
 .custom-brand {
-    color: #00458a;
+    color: var(--color-primary);
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -22,7 +23,6 @@
     width: 200px;
     height: 70px;
     background-image: url("../assets/logo_UNIVAL.png");
-    /* Update your path */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@
 }
 
 .custom-nav-links .custom-nav-link {
-    color: #00458a;
+    color: var(--color-primary);
     font-size: 19px;
     letter-spacing: 1.2px;
     font-weight: 700;
@@ -44,13 +44,12 @@
 
 .custom-nav-links .custom-nav-link:hover,
 .custom-nav-links .custom-nav-link.active {
-    color: #ffd700;
-    /* Golden hover */
+    color: var(--color-accent);
 }
 
 /* Dropdown */
 .custom-nav-dropdown .nav-link {
-    color: #555;
+    color: var(--color-text);
     font-weight: 500;
 }
 
@@ -59,12 +58,12 @@
 }
 
 .custom-dropdown-item {
-    color: #555;
+    color: var(--color-text);
 }
 
 .custom-dropdown-item:hover {
-    background-color: #f8f9fa;
-    color: #00458a;
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
 }
 
 /* Search Icon */
@@ -79,20 +78,20 @@
 }
 
 .custom-search-icon:hover {
-    background-color: rgba(0, 69, 138, 0.1);
+    background-color: rgba(var(--color-primary), 0.1);
 }
 
 /* Global Top Bar Colors */
 .bg-dark-blue {
-    background-color: #00458a;
+    background-color: var(--color-primary);
 }
 
 .text-gold {
-    color: #ffd700;
+    color: var(--color-accent);
 }
 
 .text-gold:hover {
-    color: white;
+    color: var(--color-white);
 }
 
 /* Mobile View */
@@ -102,8 +101,8 @@
         padding: 10px;
         width: 100%;
         justify-content: center;
-        border-top: 1px solid #e0e0e0;
-        background-color: #f8f9fa;
+        border-top: 1px solid var(--color-light-gray);
+        background-color: var(--color-light-gray);
     }
 
     .global-icon {

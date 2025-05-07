@@ -9,9 +9,9 @@ import "./TimelineSlider.css";
 const timelineData = [
   {
     year: "2021",
-    title: "Unival Founded",
+    title: "UniJO Founded",
     desc: "Launched to deliver innovative pharmaceutical consulting and engineering services.",
-    logo: "/logos/unival-logo.png",
+    logo: "/logos/UniJO-logo.png",
   },
   {
     year: "2022",

@@ -1,8 +1,9 @@
+@import "../styles/colors.css";
+
 /* === Footer Section === */
 .uba-footer {
-    background-color: #00458a;
-    /* Unival Blue */
-    color: #fff;
+    background: linear-gradient(30deg, var(--color-gray), var(--color-secondary-g));
+    color: var(--color-white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -28,12 +29,12 @@
 .footer-text {
     font-size: 14px;
     line-height: 1.6;
-    color: #d1e4f2;
+    color: var(--color-light-gray);
     margin-bottom: 20px;
 }
 
 .footer-socials a {
-    color: #fff;
+    color: var(--color-white);
     font-size: 20px;
     margin-right: 12px;
     display: inline-block;
@@ -41,14 +42,14 @@
 }
 
 .footer-socials a:hover {
-    color: #ffd700;
+    color: var(--color-accent);
 }
 
 .footer-heading {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 14px;
-    color: #ffd700;
+    color: var(--color-accent);
 }
 
 .footer-links {
@@ -62,13 +63,13 @@
 }
 
 .footer-links a {
-    color: #d1e4f2;
+    color: var(--color-light-gray);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 /* === Footer Form === */
@@ -88,10 +89,10 @@
 .footer-form textarea {
     flex: 1;
     padding: 10px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-gray);
     border-radius: 6px;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--color-white);
+    color: var(--color-dark);
     font-size: 14px;
 }
 
@@ -101,8 +102,8 @@
 }
 
 .footer-form button {
-    background-color: #ffd700;
-    color: #00458a;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
     font-weight: bold;
     padding: 12px;
     border: none;
@@ -112,16 +113,15 @@
 }
 
 .footer-form button:hover {
-    background-color: #f3eab5;
-    color: #00458a;
+    background-color: var(--color-hover-accent);
+    color: var(--color-primary);
 }
 
 /* === Footer Bottom === */
 .footer-bottom {
-    background-color: #003366;
-    /* Darker blue */
+    background-color: var(--color-gray-dark);
     padding: 16px;
     text-align: center;
     font-size: 13px;
-    color: #cbd8e0;
+    color: var(--color-light-gray);
 }

@@ -1,16 +1,16 @@
 import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import logo from "../assets/test_lgo2-removebg-preview.png"; // Adjust the path as necessary';
+import logo from "../assets/logo_UNIVAL.png"; // Adjust the path as necessary';
 export default function Footer() {
   return (
     <footer className="uba-footer" id="contact">
       <div className="footer-content">
         {/* Left Section */}
         <div className="footer-column logo-column">
-          <img src={logo} alt="Unival" className="footer-logo" />
+          <img src={logo} alt="UniJO" className="footer-logo" />
           <p className="footer-text">
-            At UNIVAL, we advance the pharmaceutical industry through innovative
+            At UniJO, we advance the pharmaceutical industry through innovative
             solutions, cleanroom turnkey projects, and specialized engineering
             services, ensuring quality, compliance, and operational excellence.
           </p>
@@ -69,7 +69,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>
           Copyright © {new Date().getFullYear()} All Rights Reserved |
-          <strong> UNIVAL </strong>
+          <strong> UniJO </strong>
         </p>
       </div>
     </footer>

@@ -14,8 +14,8 @@ const HeroSection = () => {
             <br /> through Innovation & Expertise
           </h1>
           <p>
-            At UNIVAL, we deliver cleanroom and engineering solutions tailored
-            to pharmaceutical standards. From consulting and project design to
+            At UniJO, we deliver cleanroom and engineering solutions tailored to
+            pharmaceutical standards. From consulting and project design to
             turnkey implementation, we are your partner in success.
           </p>
           <div className="hero-highlights">
@@ -31,7 +31,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src={mapImage} alt="UNIVAL Hero" />
+          <img src={mapImage} alt="UniJO Hero" />
         </div>
       </div>
     </section>

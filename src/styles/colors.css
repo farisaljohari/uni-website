@@ -1,0 +1,28 @@
+:root {
+    --color-primary: #00458a;
+    /* UniJO Blue */
+    --color-primary-rgb: 0, 69, 138;
+    /* RGB equivalent of UniJO Blue */
+    --color-secondary: #2596be;
+    --color-secondary-g: #d5e3eb;
+    /* Light Blue */
+    --color-accent: #ffd700;
+    /* Gold */
+    --color-white: #ffffff;
+    --color-dark: #002b5b;
+    /* Dark Blue */
+    --color-gray: #6c757d;
+    --color-gray-dark: #616a6b;
+    /* Gray */
+    --color-light-gray: #f8fafc;
+    /* Light Gray */
+    --color-text: #555;
+    /* Text Color */
+    --color-border: #ddd;
+    /* Border Color */
+    --color-bright-blue: #167dbb;
+    /* Bright Blue */
+    --color-hover-accent: #f3eab5;
+    /* Light Gold */
+    --color-footer-bg: #6c757d;
+}

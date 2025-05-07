@@ -1,6 +1,8 @@
+@import "../styles/colors.css";
+
 .hero-section {
-    background: linear-gradient(120deg, #00458a, #0c6cd1);
-    color: white;
+    background: linear-gradient(30deg, var(--color-secondary), var(--color-secondary-g));
+    color: var(--color-white);
     padding: 80px 20px;
 }
 
@@ -25,7 +27,7 @@
 }
 
 .hero-text h1 span {
-    color: #ffd700;
+    color: var(--color-accent);
 }
 
 .hero-text p {
@@ -45,7 +47,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(var(--color-white), 0.1);
     padding: 10px 15px;
     border-radius: 30px;
     font-weight: 500;
@@ -60,7 +62,6 @@
     max-width: 100%;
     height: auto;
     border-radius: 12px;
-    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
 }
 
 /* Responsive */

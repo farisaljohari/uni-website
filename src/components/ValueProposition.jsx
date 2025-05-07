@@ -5,9 +5,9 @@ const ValueProposition = () => {
   return (
     <section className="uba-value-section" id="about">
       <div className="container text-center">
-        <h2 className="fw-bold mb-2">WHY CHOOSE UNIVAL?</h2>
+        <h2 className="fw-bold mb-2">WHY CHOOSE UniJO?</h2>
         <p className="mb-4 desc">
-          <strong>At UNIVAL</strong>, we advance the pharmaceutical industry
+          <strong>At UniJO</strong>, we advance the pharmaceutical industry
           through integrity, quality, innovation, and a customer-centric
           approach. Our team of experts delivers world-class solutions tailored
           to your operational needs.

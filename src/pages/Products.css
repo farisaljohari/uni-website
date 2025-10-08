@@ -1,0 +1,202 @@
+@import "../styles/colors.css";
+
+/* Products Introduction */
+.products-intro {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+/* Partnerships Section */
+.partnerships-section {
+    padding: 40px 0 80px;
+    background: var(--color-light-gray);
+}
+
+.partnership-item {
+    background: var(--color-white);
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partnership-item:last-child {
+    margin-bottom: 0;
+}
+
+.partnership-content {
+    padding: 20px;
+}
+
+.partnership-icon {
+    font-size: 3.5rem;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.partnership-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.partnership-category {
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.partnership-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.products-list h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.products-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.products-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.products-list li::before {
+    content: "•";
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.partnership-image-placeholder {
+    padding: 20px;
+}
+
+.partnership-image-placeholder img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+}
+
+/* Alternate layout for even/odd items */
+.partnership-item.odd {
+    background: linear-gradient(135deg, rgba(0, 69, 138, 0.02), rgba(52, 152, 219, 0.02));
+}
+
+/* Products CTA */
+.products-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-light-gray);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.btn-cta-products {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-products:hover {
+    background: var(--color-hover-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .section-title,
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .partnership-name {
+        font-size: 1.75rem;
+    }
+
+    .partnership-item {
+        padding: 40px 30px;
+    }
+
+    .products-intro,
+    .partnerships-section,
+    .products-cta {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title,
+    .cta-title {
+        font-size: 1.75rem;
+    }
+
+    .partnership-name {
+        font-size: 1.5rem;
+    }
+
+    .partnership-item {
+        padding: 30px 20px;
+    }
+
+    .partnership-content,
+    .partnership-image-placeholder {
+        padding: 10px;
+    }
+
+    .partnership-icon {
+        font-size: 2.5rem;
+    }
+}

@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { HiCalendar, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,11 +54,37 @@ const timelineData = [
 export default function TimelineSlider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section className="timeline-slider" id="journey">
+    <section className="timeline-slider" id="journey" ref={sectionRef}>
       <div className="timeline-container">
-        <h2 className="timeline-title">OUR JOURNEY</h2>
+        <h2 className={`timeline-title ${isVisible ? "fade-in" : ""}`}>OUR JOURNEY</h2>
+        <p className={`timeline-subtitle ${isVisible ? "fade-in-delay" : ""}`}>
+          Discover our remarkable milestones and growth journey in the pharmaceutical industry
+        </p>
 
         {/* Arrows outside Swiper */}
         <div ref={prevRef} className="nav-arrow-left swiper-button-prev-custom">
@@ -73,9 +99,15 @@ export default function TimelineSlider() {
         </div>
 
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={30}
           slidesPerView={4}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          loop={true}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -91,6 +123,7 @@ export default function TimelineSlider() {
             992: { slidesPerView: 3, spaceBetween: 30 },
             1200: { slidesPerView: 4, spaceBetween: 30 },
           }}
+          className={`timeline-swiper ${isVisible ? "swiper-visible" : ""}`}
         >
           {timelineData.map((item, index) => (
             <SwiperSlide key={index}>

@@ -1,0 +1,225 @@
+@import "../styles/colors.css";
+
+/* World Map Container */
+.world-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.world-map {
+    width: 100%;
+    height: auto;
+}
+
+/* Connection Lines Animation */
+.connection-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Hub Marker */
+.hub-marker {
+    animation: hubPulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+}
+
+@keyframes hubPulse {
+    0%, 100% {
+        r: 4;
+        opacity: 1;
+    }
+    50% {
+        r: 6;
+        opacity: 0.7;
+    }
+}
+
+/* Country Marker Group */
+.country-marker-group {
+    cursor: pointer;
+    opacity: 0;
+    animation: markerAppear 0.8s ease forwards;
+    position: relative;
+    z-index: 1;
+}
+
+.country-marker-group:hover {
+    z-index: 100;
+}
+
+@keyframes markerAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Flag Marker */
+.flag-marker {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 3px 12px rgba(0, 69, 138, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: flagFloat 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@keyframes flagFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.flag-container:hover .flag-marker {
+    transform: scale(1.2);
+    border-color: #f0c800;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.7);
+}
+
+.flag-container:hover .flag-image {
+    transform: scale(1.1);
+}
+
+/* Marker Ring Pulse */
+.marker-ring {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    opacity: 0;
+    animation: ringPulse 2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.flag-container:hover .marker-ring {
+    animation: ringPulseFast 1s ease-out infinite;
+}
+
+@keyframes ringPulseFast {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* Marker Tooltip */
+.marker-tooltip {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 6px 20px rgba(0, 69, 138, 0.4);
+    text-align: center;
+    position: relative;
+    animation: tooltipSlide 0.3s ease forwards;
+}
+
+@keyframes tooltipSlide {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.marker-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .world-map-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .marker-tooltip {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .world-map-container {
+        padding: 15px;
+    }
+
+    .flag-marker {
+        border-width: 1.5px;
+    }
+
+    .marker-tooltip {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+}

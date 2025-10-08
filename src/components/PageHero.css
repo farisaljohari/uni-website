@@ -1,0 +1,82 @@
+@import "../styles/colors.css";
+
+.page-hero {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    padding: 80px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 69, 138, 0.9), rgba(52, 152, 219, 0.8));
+    z-index: 1;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.breadcrumb-nav {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--color-light-gray);
+}
+
+.breadcrumb-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--color-accent);
+}
+
+.breadcrumb-nav .current {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.breadcrumb-nav .separator {
+    color: var(--color-light-gray);
+    margin: 0 8px;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-light-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 60px 20px 40px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}

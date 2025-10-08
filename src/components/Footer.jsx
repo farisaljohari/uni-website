@@ -1,27 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import logo from "../assets/logo_UNIVAL.png"; // Adjust the path as necessary';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp, FaPhone, FaEnvelope } from "react-icons/fa";
+import logo from "../assets/logo_UNIVAL.png";
+
 export default function Footer() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="uba-footer" id="contact">
+    <>
+      <footer className="uba-footer" id="contact">
       <div className="footer-content">
         {/* Left Section */}
         <div className="footer-column logo-column">
-          <img src={logo} alt="UniJO" className="footer-logo" />
+          <img src={logo} alt="Unival" className="footer-logo" />
           <p className="footer-text">
-            At UniJO, we advance the pharmaceutical industry through innovative
+            At Unival, we advance the pharmaceutical industry through innovative
             solutions, cleanroom turnkey projects, and specialized engineering
             services, ensuring quality, compliance, and operational excellence.
           </p>
+          <div className="footer-contact-info">
+            <a href="tel:0797461628" className="footer-contact-item">
+              <FaPhone className="footer-contact-icon" />
+              <span>0797461628</span>
+            </a>
+            <a href="mailto:info@uni-jo.com" className="footer-contact-item">
+              <FaEnvelope className="footer-contact-icon" />
+              <span>info@uni-jo.com</span>
+            </a>
+          </div>
           <div className="footer-socials">
-            <a href="#">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a href="#">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="#">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
           </div>
@@ -32,16 +63,25 @@ export default function Footer() {
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="footer-links">
             <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
-              <a href="#">Our Services</a>
+              <Link to="/services">Our Services</Link>
             </li>
             <li>
-              <a href="#">Turnkey Projects</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <Link to="/team">Our Team</Link>
+            </li>
+            <li>
+              <Link to="/quality">Quality</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -73,5 +113,16 @@ export default function Footer() {
         </p>
       </div>
     </footer>
+
+    {/* Scroll to Top Button */}
+    <div
+      className={`scroll-to-top ${showScrollTop ? "visible" : ""}`}
+      onClick={scrollToTop}
+      role="button"
+      aria-label="Scroll to top"
+    >
+      <FaArrowUp />
+    </div>
+    </>
   );
 }

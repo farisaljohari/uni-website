@@ -16,6 +16,19 @@
 .world-map {
     width: 100%;
     height: auto;
+    /* Improve mobile rendering */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Ensure foreignObject works on mobile */
+.world-map foreignObject {
+    overflow: visible;
+}
+
+.world-map foreignObject > div {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Connection Lines Animation */
@@ -89,6 +102,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .flag-image {
@@ -96,6 +112,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 @keyframes flagFloat {
@@ -207,6 +226,16 @@
         font-size: 0.7rem;
         padding: 5px 10px;
     }
+
+    /* Improve mobile rendering */
+    .flag-container {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    .flag-marker {
+        will-change: transform;
+    }
 }
 
 @media (max-width: 576px) {
@@ -216,10 +245,38 @@
 
     .flag-marker {
         border-width: 1.5px;
+        /* Disable float animation on small screens for better performance */
+        animation: none;
+    }
+
+    .flag-image {
+        /* Force hardware acceleration */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     .marker-tooltip {
         font-size: 0.65rem;
         padding: 4px 8px;
+    }
+
+    /* Simplify animations on mobile */
+    .country-marker-group {
+        animation: markerAppearSimple 0.5s ease forwards;
+    }
+
+    .marker-ring {
+        /* Disable ring animation on small screens */
+        animation: none;
+        opacity: 0;
+    }
+}
+
+@keyframes markerAppearSimple {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

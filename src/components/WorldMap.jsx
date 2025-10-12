@@ -98,12 +98,18 @@ const WorldMap = () => {
                   width={30}
                   height={30}
                   className="flag-container"
+                  style={{ overflow: 'visible' }}
                 >
-                  <div className="flag-marker">
+                  <div
+                    className="flag-marker"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                  >
                     <img
                       src={`https://flagcdn.com/w80/${marker.code}.png`}
                       alt={marker.name}
                       className="flag-image"
+                      loading="eager"
+                      crossOrigin="anonymous"
                     />
                     <div className="marker-ring"></div>
                   </div>
@@ -115,8 +121,14 @@ const WorldMap = () => {
                     width={100}
                     height={35}
                     className="tooltip-container"
+                    style={{ overflow: 'visible' }}
                   >
-                    <div className="marker-tooltip">{marker.name}</div>
+                    <div
+                      className="marker-tooltip"
+                      xmlns="http://www.w3.org/1999/xhtml"
+                    >
+                      {marker.name}
+                    </div>
                   </foreignObject>
                 )}
               </g>

@@ -35,16 +35,7 @@ export default function Footer() {
             solutions, cleanroom turnkey projects, and specialized engineering
             services, ensuring quality, compliance, and operational excellence.
           </p>
-          <div className="footer-contact-info">
-            <a href="tel:0797461628" className="footer-contact-item">
-              <FaPhone className="footer-contact-icon" />
-              <span>0797461628</span>
-            </a>
-            <a href="mailto:info@uni-jo.com" className="footer-contact-item">
-              <FaEnvelope className="footer-contact-icon" />
-              <span>info@uni-jo.com</span>
-            </a>
-          </div>
+         
           <div className="footer-socials">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />

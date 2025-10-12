@@ -36,7 +36,7 @@ const Home = () => {
     {
       name: "STC",
       category: "Mixing & Granulation",
-      image: "https://images.unsplash.com/photo-1583911860-73bffc9e6b81?w=400",
+      image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400",
     },
   ];
 

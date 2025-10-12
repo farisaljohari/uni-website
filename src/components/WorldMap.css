@@ -16,19 +16,6 @@
 .world-map {
     width: 100%;
     height: auto;
-    /* Improve mobile rendering */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-/* Ensure foreignObject works on mobile */
-.world-map foreignObject {
-    overflow: visible;
-}
-
-.world-map foreignObject > div {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
 }
 
 /* Connection Lines Animation */
@@ -66,12 +53,12 @@
     cursor: pointer;
     opacity: 0;
     animation: markerAppear 0.8s ease forwards;
-    position: relative;
-    z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .country-marker-group:hover {
-    z-index: 100;
+    transform: scale(1.15);
+    filter: drop-shadow(0 5px 15px rgba(255, 215, 0, 0.6));
 }
 
 @keyframes markerAppear {
@@ -88,106 +75,53 @@
     }
 }
 
-/* Flag Marker */
-.flag-marker {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 50%;
-    border: 2px solid var(--color-accent);
-    box-shadow: 0 3px 12px rgba(0, 69, 138, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: flagFloat 3s ease-in-out infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+/* Flag Image SVG */
+.flag-image-svg {
+    transition: all 0.3s ease;
 }
 
-.flag-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.country-marker-group:hover .flag-image-svg {
+    transform: scale(1.05);
 }
 
-@keyframes flagFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
-}
-
-.flag-container:hover .flag-marker {
-    transform: scale(1.2);
-    border-color: #f0c800;
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.7);
-}
-
-.flag-container:hover .flag-image {
-    transform: scale(1.1);
-}
-
-/* Marker Ring Pulse */
-.marker-ring {
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50%;
-    border: 2px solid var(--color-accent);
+/* Marker Outer Ring */
+.marker-outer-ring {
     opacity: 0;
     animation: ringPulse 2s ease-out infinite;
-    pointer-events: none;
 }
 
 @keyframes ringPulse {
     0% {
-        transform: scale(1);
+        r: 17;
         opacity: 0.8;
+        stroke-width: 2;
     }
     100% {
-        transform: scale(2);
+        r: 22;
         opacity: 0;
+        stroke-width: 1;
     }
 }
 
-.flag-container:hover .marker-ring {
+.country-marker-group:hover .marker-outer-ring {
     animation: ringPulseFast 1s ease-out infinite;
 }
 
 @keyframes ringPulseFast {
     0% {
-        transform: scale(1);
+        r: 17;
         opacity: 1;
+        stroke-width: 2;
     }
     100% {
-        transform: scale(1.8);
+        r: 20;
         opacity: 0;
+        stroke-width: 1;
     }
 }
 
-/* Marker Tooltip */
-.marker-tooltip {
-    background: var(--color-primary);
-    color: var(--color-white);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
-    box-shadow: 0 6px 20px rgba(0, 69, 138, 0.4);
-    text-align: center;
-    position: relative;
+/* Tooltip */
+.tooltip-group {
     animation: tooltipSlide 0.3s ease forwards;
 }
 
@@ -202,39 +136,31 @@
     }
 }
 
-.marker-tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--color-primary);
+.tooltip-bg {
+    filter: drop-shadow(0 4px 12px rgba(0, 78, 146, 0.4));
+}
+
+.tooltip-text {
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .world-map-container {
         max-width: 100%;
-        padding: 15px;
+        padding: 20px;
     }
 
-    .marker-tooltip {
-        font-size: 0.7rem;
-        padding: 5px 10px;
+    .tooltip-text {
+        font-size: 10px;
     }
 
-    /* Improve mobile rendering */
-    .flag-container {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-    }
-
-    .flag-marker {
-        will-change: transform;
+    .tooltip-bg {
+        width: 80;
+        height: 22;
+        x: -40;
+        y: -42;
     }
 }
 
@@ -243,21 +169,15 @@
         padding: 15px;
     }
 
-    .flag-marker {
-        border-width: 1.5px;
-        /* Disable float animation on small screens for better performance */
-        animation: none;
+    .tooltip-text {
+        font-size: 9px;
     }
 
-    .flag-image {
-        /* Force hardware acceleration */
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    .marker-tooltip {
-        font-size: 0.65rem;
-        padding: 4px 8px;
+    .tooltip-bg {
+        width: 70;
+        height: 20;
+        x: -35;
+        y: -40;
     }
 
     /* Simplify animations on mobile */
@@ -265,7 +185,7 @@
         animation: markerAppearSimple 0.5s ease forwards;
     }
 
-    .marker-ring {
+    .marker-outer-ring {
         /* Disable ring animation on small screens */
         animation: none;
         opacity: 0;

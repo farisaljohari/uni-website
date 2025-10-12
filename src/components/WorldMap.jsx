@@ -92,44 +92,63 @@ const WorldMap = () => {
                 className="country-marker-group"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <foreignObject
-                  x={-15}
-                  y={-15}
-                  width={30}
-                  height={30}
-                  className="flag-container"
-                  style={{ overflow: 'visible' }}
-                >
-                  <div
-                    className="flag-marker"
-                    xmlns="http://www.w3.org/1999/xhtml"
-                  >
-                    <img
-                      src={`https://flagcdn.com/w80/${marker.code}.png`}
-                      alt={marker.name}
-                      className="flag-image"
-                      loading="eager"
-                      crossOrigin="anonymous"
-                    />
-                    <div className="marker-ring"></div>
-                  </div>
-                </foreignObject>
+                {/* Outer ring */}
+                <circle
+                  r={17}
+                  fill="none"
+                  stroke="#ffd700"
+                  strokeWidth={2}
+                  className="marker-outer-ring"
+                />
+
+                {/* White background */}
+                <circle
+                  r={15}
+                  fill="white"
+                  stroke="#ffd700"
+                  strokeWidth={2}
+                />
+
+                {/* Flag image clipped to circle */}
+                <defs>
+                  <clipPath id={`clip-${marker.code}`}>
+                    <circle r={13} />
+                  </clipPath>
+                </defs>
+                <image
+                  xlinkHref={`https://flagcdn.com/w80/${marker.code}.png`}
+                  x={-13}
+                  y={-13}
+                  width={26}
+                  height={26}
+                  clipPath={`url(#clip-${marker.code})`}
+                  className="flag-image-svg"
+                />
+
+                {/* Tooltip */}
                 {tooltipContent === marker.name && (
-                  <foreignObject
-                    x={-50}
-                    y={-50}
-                    width={100}
-                    height={35}
-                    className="tooltip-container"
-                    style={{ overflow: 'visible' }}
-                  >
-                    <div
-                      className="marker-tooltip"
-                      xmlns="http://www.w3.org/1999/xhtml"
+                  <g className="tooltip-group">
+                    <rect
+                      x={-45}
+                      y={-45}
+                      width={90}
+                      height={25}
+                      rx={8}
+                      fill="#004e92"
+                      className="tooltip-bg"
+                    />
+                    <text
+                      x={0}
+                      y={-28}
+                      textAnchor="middle"
+                      fill="white"
+                      fontSize="11"
+                      fontWeight="600"
+                      className="tooltip-text"
                     >
                       {marker.name}
-                    </div>
-                  </foreignObject>
+                    </text>
+                  </g>
                 )}
               </g>
             </Marker>

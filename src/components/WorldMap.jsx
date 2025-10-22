@@ -66,7 +66,7 @@ const WorldMap = () => {
                 y1={0}
                 x2={(marker.coordinates[0] - 35) * 4}
                 y2={(marker.coordinates[1] - 15) * -4}
-                stroke="#ffd700"
+                stroke="#67bed9"
                 strokeWidth="0.6"
                 opacity="0.35"
                 className="connection-line"
@@ -77,7 +77,7 @@ const WorldMap = () => {
 
           {/* Central hub marker */}
           <Marker coordinates={[35, 15]}>
-            <circle r={5} fill="#ffd700" className="hub-marker" />
+            <circle r={5} fill="#67bed9" className="hub-marker" />
           </Marker>
 
           {/* Country markers with flags */}
@@ -96,7 +96,7 @@ const WorldMap = () => {
                 <circle
                   r={17}
                   fill="none"
-                  stroke="#ffd700"
+                  stroke="#67bed9"
                   strokeWidth={2}
                   className="marker-outer-ring"
                 />
@@ -105,7 +105,7 @@ const WorldMap = () => {
                 <circle
                   r={15}
                   fill="white"
-                  stroke="#ffd700"
+                  stroke="#67bed9"
                   strokeWidth={2}
                 />
 

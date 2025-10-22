@@ -1,44 +1,16 @@
 @import "../styles/colors.css";
 
-/* Color Themes */
+/* Color Themes - Unified Blue Theme */
 :root {
-    --color-blue-light: #e3f2fd;
-    --color-blue-main: #2196f3;
-    --color-blue-dark: #1976d2;
-
-    --color-teal-light: #e0f2f1;
-    --color-teal-main: #26a69a;
-    --color-teal-dark: #00897b;
-
-    --color-purple-light: #f3e5f5;
-    --color-purple-main: #ab47bc;
-    --color-purple-dark: #8e24aa;
-
-    --color-green-light: #e8f5e9;
-    --color-green-main: #66bb6a;
-    --color-green-dark: #43a047;
-
-    --color-orange-light: #fff3e0;
-    --color-orange-main: #ff9800;
-    --color-orange-dark: #f57c00;
-
-    --color-red-light: #ffebee;
-    --color-red-main: #ef5350;
-    --color-red-dark: #e53935;
-
-    --color-pink-light: #fce4ec;
-    --color-pink-main: #ec407a;
-    --color-pink-dark: #d81b60;
-
-    --color-indigo-light: #e8eaf6;
-    --color-indigo-main: #5c6bc0;
-    --color-indigo-dark: #3949ab;
+    --color-card-light: #e3f5fb;
+    --color-card-main: #67bed9;
+    --color-card-dark: #4a9ec4;
 }
 
 /* Team Introduction */
 .team-intro {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f5f9fb 0%, #e3f5fb 100%);
 }
 
 .section-title {
@@ -92,53 +64,11 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* Color-specific card variables */
-.team-member-card.blue {
-    --card-color-light: var(--color-blue-light);
-    --card-color-main: var(--color-blue-main);
-    --card-color-dark: var(--color-blue-dark);
-}
-
-.team-member-card.teal {
-    --card-color-light: var(--color-teal-light);
-    --card-color-main: var(--color-teal-main);
-    --card-color-dark: var(--color-teal-dark);
-}
-
-.team-member-card.purple {
-    --card-color-light: var(--color-purple-light);
-    --card-color-main: var(--color-purple-main);
-    --card-color-dark: var(--color-purple-dark);
-}
-
-.team-member-card.green {
-    --card-color-light: var(--color-green-light);
-    --card-color-main: var(--color-green-main);
-    --card-color-dark: var(--color-green-dark);
-}
-
-.team-member-card.orange {
-    --card-color-light: var(--color-orange-light);
-    --card-color-main: var(--color-orange-main);
-    --card-color-dark: var(--color-orange-dark);
-}
-
-.team-member-card.red {
-    --card-color-light: var(--color-red-light);
-    --card-color-main: var(--color-red-main);
-    --card-color-dark: var(--color-red-dark);
-}
-
-.team-member-card.pink {
-    --card-color-light: var(--color-pink-light);
-    --card-color-main: var(--color-pink-main);
-    --card-color-dark: var(--color-pink-dark);
-}
-
-.team-member-card.indigo {
-    --card-color-light: var(--color-indigo-light);
-    --card-color-main: var(--color-indigo-main);
-    --card-color-dark: var(--color-indigo-dark);
+/* Unified card color variables */
+.team-member-card {
+    --card-color-light: var(--color-card-light);
+    --card-color-main: var(--color-card-main);
+    --card-color-dark: var(--color-card-dark);
 }
 
 /* Member Header */
@@ -325,7 +255,7 @@
 /* Team CTA */
 .team-cta {
     padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
     color: var(--color-white);
     position: relative;
     overflow: hidden;
@@ -379,7 +309,7 @@
 
 .btn-cta-team:hover {
     background: var(--color-accent);
-    color: var(--color-primary);
+    color: var(--color-white);
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }

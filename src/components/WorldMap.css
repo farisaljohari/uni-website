@@ -34,7 +34,7 @@
 /* Hub Marker */
 .hub-marker {
     animation: hubPulse 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+    filter: drop-shadow(0 0 10px rgba(103, 190, 217, 0.9));
 }
 
 @keyframes hubPulse {
@@ -58,7 +58,7 @@
 
 .country-marker-group:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 5px 15px rgba(255, 215, 0, 0.6));
+    filter: drop-shadow(0 5px 15px rgba(103, 190, 217, 0.6));
 }
 
 @keyframes markerAppear {

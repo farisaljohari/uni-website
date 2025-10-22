@@ -8,7 +8,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaFacebookF,
-  FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
 
@@ -243,7 +242,7 @@ const Contact = () => {
                   <h4>Connect With Us</h4>
                   <div className="social-links">
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/share/1793vypo3K/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link"
@@ -251,15 +250,7 @@ const Contact = () => {
                       <FaFacebookF />
                     </a>
                     <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <FaInstagram />
-                    </a>
-                    <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/unival-jordan-90a038304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link"

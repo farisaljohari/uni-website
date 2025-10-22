@@ -1,14 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { useEffect, useRef, useState } from "react";
 import { HiCalendar, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./TimelineSlider.css";
 
 const timelineData = [
   {
-    year: "2021",
+    year: "2020",
     title: "UniJO Founded",
     desc: "Launched to deliver innovative pharmaceutical consulting and engineering services.",
     logo: "/logos/UniJO-logo.png",
@@ -81,9 +81,12 @@ export default function TimelineSlider() {
   return (
     <section className="timeline-slider" id="journey" ref={sectionRef}>
       <div className="timeline-container">
-        <h2 className={`timeline-title ${isVisible ? "fade-in" : ""}`}>OUR JOURNEY</h2>
+        <h2 className={`timeline-title ${isVisible ? "fade-in" : ""}`}>
+          OUR JOURNEY
+        </h2>
         <p className={`timeline-subtitle ${isVisible ? "fade-in-delay" : ""}`}>
-          Discover our remarkable milestones and growth journey in the pharmaceutical industry
+          Discover our remarkable milestones and growth journey in the
+          pharmaceutical industry
         </p>
 
         {/* Arrows outside Swiper */}

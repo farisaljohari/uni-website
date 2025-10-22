@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import {
   FaFacebookF,
-  FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
 
@@ -98,7 +97,7 @@ const Header = () => {
             <Nav className="nav-actions">
               <div className="navbar-social-icons">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1793vypo3K/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="navbar-social-link"
@@ -107,16 +106,7 @@ const Header = () => {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="navbar-social-link"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/unival-jordan-90a038304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="navbar-social-link"

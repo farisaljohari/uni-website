@@ -63,7 +63,7 @@ const Home = () => {
               <p className="profile-text">
                 At UniJO, we are passionate about advancing the pharmaceutical
                 industry through innovation and expertise. Founded in{" "}
-                <strong>2021</strong>, our team of dedicated professionals
+                <strong>2020</strong>, our team of dedicated professionals
                 specializes in providing comprehensive consulting services,
                 sourcing high-quality medical and pharmaceutical supplies, and
                 designing projects that comply with international standards.

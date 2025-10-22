@@ -66,7 +66,7 @@ const Contact = () => {
                 </div>
                 <h4 className="contact-info-title">Phone</h4>
                 <p className="contact-info-text">
-                  <a href="tel:0797461628">0797461628</a>
+                  <a href="tel:065340102">065340102</a>
                 </p>
               </div>
             </div>

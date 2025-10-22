@@ -15,55 +15,59 @@ import {
   FaTools,
   FaProjectDiagram,
 } from "react-icons/fa";
+import consultationImg from "../assets/CONSULTATION.jpg";
+import cleanroomImg from "../assets/CLEANROOMSYSTEMS.jpg";
+import hvacImg from "../assets/HVAC.jpg";
+import projectMgmtImg from "../assets/PROJECTMANAGEMENT.jpg";
 
 const services = [
   {
     title: "CONSULTATION",
     icon: <FaUserTie />,
     description: "Expert advice to optimize operations and navigate challenges",
-    bgImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600",
+    bgImage: consultationImg,
   },
   {
     title: "CLEANROOM SYSTEMS",
     icon: <FaFlask />,
     description: "Complete calibration services for cleanroom facilities and equipment",
-    bgImage: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600",
+    bgImage: cleanroomImg,
   },
   {
     title: "PHARMA MACHINERY",
     icon: <FaCogs />,
     description: "Comprehensive range of machinery and tools for all industrial applications",
-    bgImage: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600",
+    bgImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
   },
   {
     title: "VALIDATION & QUALIFICATION",
     icon: <FaCheckCircle />,
     description: "Ensuring systems meet regulatory requirements and best practices",
-    bgImage: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600",
+    bgImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80",
   },
   {
     title: "HVAC & UTILITIES",
     icon: <FaProjectDiagram />,
     description: "Design and installation of critical utility systems",
-    bgImage: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600",
+    bgImage: hvacImg,
   },
   {
     title: "PACKAGING SOLUTIONS",
     icon: <FaBox />,
     description: "High-quality raw materials and packaging for your production",
-    bgImage: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600",
+    bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
   },
   {
     title: "MAINTENANCE & CALIBRATION",
     icon: <FaTools />,
     description: "Comprehensive maintenance to keep equipment at peak performance",
-    bgImage: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600",
+    bgImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80",
   },
   {
     title: "PROJECT MANAGEMENT",
     icon: <FaTasks />,
     description: "End-to-end project coordination from inception to completion",
-    bgImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600",
+    bgImage: projectMgmtImg,
   },
 ];
 

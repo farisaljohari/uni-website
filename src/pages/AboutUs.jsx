@@ -85,7 +85,7 @@ const AboutUs = () => {
             <div className="col-lg-6">
               <div className="profile-image-placeholder">
                 <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
                   alt="Pharmaceutical Lab"
                   className="img-fluid rounded"
                 />
@@ -144,7 +144,7 @@ const AboutUs = () => {
             </p>
             <div className="coverage-map-placeholder">
               <img
-                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200"
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80"
                 alt="Global Coverage Map"
                 className="img-fluid"
               />

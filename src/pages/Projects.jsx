@@ -177,7 +177,7 @@ const Projects = () => {
             <div className="col-lg-6">
               <div className="turnkey-image-placeholder">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
+                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
                   alt="Pharmaceutical Factory"
                   className="img-fluid rounded"
                 />

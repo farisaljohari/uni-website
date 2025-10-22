@@ -19,24 +19,24 @@ const Home = () => {
       name: "Veck (Tianjin) Co. Ltd.",
       category: "HVAC Systems",
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400",
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
     },
     {
       name: "SHINVA Pharmaceutical",
       category: "Pharmaceutical Machinery",
       image:
-        "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400",
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
     },
     {
       name: "UniJO China",
       category: "Cleanroom Solutions",
       image:
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400",
+        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
     },
     {
       name: "STC",
       category: "Mixing & Granulation",
-      image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400",
+      image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&q=80",
     },
   ];
 
@@ -82,8 +82,8 @@ const Home = () => {
             <div className="col-lg-6">
               <div className="profile-image">
                 <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800"
-                  alt="Pharmaceutical Laboratory"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                  alt="Pharmaceutical Consulting and Engineering"
                   className="img-fluid rounded"
                 />
               </div>
@@ -102,7 +102,7 @@ const Home = () => {
             <div className="col-lg-6">
               <div className="why-choose-image">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
+                  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
                   alt="Quality Assurance"
                   className="img-fluid rounded"
                 />

@@ -70,7 +70,7 @@ const AboutUs = () => {
     <>
       <Header />
       <PageHero
-        title="About Unival"
+        title="About UniJO"
         subtitle="Advancing the Pharmaceutical Industry through Innovation and Expertise"
         breadcrumbs={[
           { label: "Home", link: "/" },
@@ -94,7 +94,7 @@ const AboutUs = () => {
             <div className="col-lg-6">
               <h2 className="section-title">Our Profile</h2>
               <p className="profile-text">
-                At Unival, we are passionate about advancing the pharmaceutical
+                At UniJO, we are passionate about advancing the pharmaceutical
                 industry through innovation and expertise. Founded in{" "}
                 <strong>2021</strong>, our team of dedicated professionals
                 specializes in providing comprehensive consulting services,
@@ -137,7 +137,7 @@ const AboutUs = () => {
           <h2 className="section-title text-center mb-5">Market Coverage</h2>
           <div className="coverage-content">
             <p className="text-center mb-4">
-              At Unival, we proudly serve a diverse range of markets across
+              At UniJO, we proudly serve a diverse range of markets across
               multiple regions. Our business operations extend throughout the
               Middle East, where we have established a strong presence catering
               to the unique needs of pharmaceutical industries in this region.
@@ -182,9 +182,9 @@ const AboutUs = () => {
       {/* Why Choose Us CTA */}
       <section className="why-choose-cta">
         <div className="container text-center">
-          <h2 className="cta-title">Why Choose Unival?</h2>
+          <h2 className="cta-title">Why Choose UniJO?</h2>
           <p className="cta-text">
-            With a trusted partner like Unival, you gain an experienced team
+            With a trusted partner like UniJO, you gain an experienced team
             committed to your success. We are committed to be your partner in
             success, delivering projects that uphold the highest standards of
             quality and regulatory compliance.

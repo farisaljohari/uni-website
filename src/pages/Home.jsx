@@ -28,7 +28,7 @@ const Home = () => {
         "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400",
     },
     {
-      name: "Unival China",
+      name: "UniJO China",
       category: "Cleanroom Solutions",
       image:
         "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400",
@@ -59,9 +59,9 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h2 className="section-title">About Unival</h2>
+              <h2 className="section-title">About UniJO</h2>
               <p className="profile-text">
-                At Unival, we are passionate about advancing the pharmaceutical
+                At UniJO, we are passionate about advancing the pharmaceutical
                 industry through innovation and expertise. Founded in{" "}
                 <strong>2021</strong>, our team of dedicated professionals
                 specializes in providing comprehensive consulting services,
@@ -109,9 +109,9 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h2 className="section-title">Why Choose Unival?</h2>
+              <h2 className="section-title">Why Choose UniJO?</h2>
               <p className="why-choose-intro">
-                With a trusted partner like Unival, you gain an experienced team
+                With a trusted partner like UniJO, you gain an experienced team
                 committed to your success. We deliver projects that uphold the
                 highest standards of quality and regulatory compliance.
               </p>
@@ -178,7 +178,7 @@ const Home = () => {
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="cta-title">Ready to Transform Your Operations?</h2>
               <p className="cta-text">
-                Partner with Unival for comprehensive pharmaceutical engineering
+                Partner with UniJO for comprehensive pharmaceutical engineering
                 solutions, turnkey projects, and expert consultation services.
                 Let's create excellence together.
               </p>

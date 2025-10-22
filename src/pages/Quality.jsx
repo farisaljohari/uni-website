@@ -156,7 +156,7 @@ const Quality = () => {
             <div className="col-lg-8 text-center">
               <h2 className="section-title">Quality Culture</h2>
               <p className="intro-text">
-                At Unival, we believe that a strong quality culture is the
+                At UniJO, we believe that a strong quality culture is the
                 foundation of our success. Our commitment to quality is embedded
                 in every aspect of our operations and is reflected in our core
                 values and certifications.

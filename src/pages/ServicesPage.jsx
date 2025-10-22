@@ -133,7 +133,7 @@ const ServicesPage = () => {
             <div className="col-lg-8 text-center">
               <h2 className="intro-title">Business Scope</h2>
               <p className="intro-text">
-                At Unival, our expertise spans a wide range of services tailored
+                At UniJO, our expertise spans a wide range of services tailored
                 to meet the diverse needs of various industrial sectors. We
                 provide end-to-end solutions that ensure quality, compliance,
                 and operational excellence in the pharmaceutical industry.

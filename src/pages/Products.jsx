@@ -25,11 +25,11 @@ const Products = () => {
       ],
     },
     {
-      partner: "Unival China",
+      partner: "UniJO China",
       category: "Cleanroom Solutions",
       icon: <FaBoxes />,
       description:
-        "In partnership with Unival China, our company supplies specialized cleanroom solutions, including cleanroom sandwich panels, ceiling systems, cleanroom doors and windows, along with related products.",
+        "In partnership with UniJO China, our company supplies specialized cleanroom solutions, including cleanroom sandwich panels, ceiling systems, cleanroom doors and windows, along with related products.",
       products: [
         "Cleanroom sandwich panels",
         "Ceiling systems",

@@ -12,7 +12,7 @@ const Team = () => {
       position: "CEO",
       education: "Bachelor's degree in Pharmaceutical Formulation Process",
       experience:
-        "CEO of Trusted Union, based in Amman, specializing in Pharmaceutical Engineering & Technology. Over 30 years dedicated to advancing pharmaceutical process and engineering systems, with expertise in Good Engineering Practice (GEP) and Good Manufacturing Practice (GMP) management. Strong capabilities in Engineering, Procurement, and Construction (EPC) and turnkey solutions. Played a crucial role in planning, design, and execution of numerous major pharmaceutical engineering projects in China, Africa, and the Middle East, including pharmaceutical plants, animal vaccine facilities, and cosmetic manufacturing plants. Under his leadership, Unival has become a one-stop solution provider for the pharmaceutical and vaccine project sectors.",
+        "CEO of Trusted Union, based in Amman, specializing in Pharmaceutical Engineering & Technology. Over 30 years dedicated to advancing pharmaceutical process and engineering systems, with expertise in Good Engineering Practice (GEP) and Good Manufacturing Practice (GMP) management. Strong capabilities in Engineering, Procurement, and Construction (EPC) and turnkey solutions. Played a crucial role in planning, design, and execution of numerous major pharmaceutical engineering projects in China, Africa, and the Middle East, including pharmaceutical plants, animal vaccine facilities, and cosmetic manufacturing plants. Under his leadership, UniJO has become a one-stop solution provider for the pharmaceutical and vaccine project sectors.",
       certifications: [
         "GEP & GMP Management Expert",
         "EPC & Turnkey Solutions Specialist",

@@ -29,9 +29,9 @@ export default function Footer() {
       <div className="footer-content">
         {/* Left Section */}
         <div className="footer-column logo-column">
-          <img src={logo} alt="Unival" className="footer-logo" />
+          <img src={logo} alt="UniJO" className="footer-logo" />
           <p className="footer-text">
-            At Unival, we advance the pharmaceutical industry through innovative
+            At UniJO, we advance the pharmaceutical industry through innovative
             solutions, cleanroom turnkey projects, and specialized engineering
             services, ensuring quality, compliance, and operational excellence.
           </p>

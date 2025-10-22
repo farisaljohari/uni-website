@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="container hero-content">
         <div className={`hero-text ${isVisible ? "fade-in" : ""}`}>
           <div className="hero-badge">
-            <span>Welcome to Unival</span>
+            <span>Welcome to UniJO</span>
           </div>
           <h1 className="hero-title">
             Advancing the{" "}
@@ -31,7 +31,7 @@ const HeroSection = () => {
             <br /> through Innovation & Expertise
           </h1>
           <p className="hero-description">
-            At Unival, we deliver cleanroom and engineering solutions tailored
+            At UniJO, we deliver cleanroom and engineering solutions tailored
             to pharmaceutical standards. From consulting and project design to
             turnkey implementation, we are your partner in success.
           </p>

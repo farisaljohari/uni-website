@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import PageHero from "../components/PageHero";
 import Footer from "../components/Footer";
 import "./Team.css";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaUserTie, FaUserGraduate, FaBriefcase, FaCertificate } from "react-icons/fa";
 
 const Team = () => {
   const teamMembers = [
@@ -18,7 +18,7 @@ const Team = () => {
         "EPC & Turnkey Solutions Specialist",
         "International Project Experience (China, Africa, Middle East)",
       ],
-      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      color: "blue",
     },
     {
       name: "Mutaz Salman",
@@ -34,7 +34,7 @@ const Team = () => {
         "Specialized training in design of mechanical engineering systems (firefighting, HVAC, plumbing)",
         "Extensive knowledge in safety and hazard management in chemical handling",
       ],
-      image: "https://randomuser.me/api/portraits/men/2.jpg",
+      color: "teal",
     },
     {
       name: "Marwa Saleem",
@@ -49,7 +49,7 @@ const Team = () => {
         "ISO 17025:2017 Certification",
         "KAIZEN Training – Japan International Cooperation Agency (JICA), Japan",
       ],
-      image: "https://randomuser.me/api/portraits/women/1.jpg",
+      color: "purple",
     },
     {
       name: "Rasha Abu Naba",
@@ -61,7 +61,7 @@ const Team = () => {
         "Certified Pharmaceutical GMP Professional Candidate – American Society for Quality",
         "Good Manufacturing Practices (GMP) Training",
       ],
-      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      color: "green",
     },
     {
       name: "Noor Al-Najjar",
@@ -70,10 +70,10 @@ const Team = () => {
       experience:
         "With 15 years of experience in Purchasing and Supplies Management, ensuring efficient procurement and supply chain operations.",
       certifications: [
-        "Certified Supply Chain Export Candidate – The International Association for People & Performance Development",
+        "Certified Supply Chain Expert Candidate – The International Association for People & Performance Development",
         "Clearance and Customs Training",
       ],
-      image: "https://randomuser.me/api/portraits/women/3.jpg",
+      color: "orange",
     },
     {
       name: "Ramadan Nofal",
@@ -83,7 +83,7 @@ const Team = () => {
       experience:
         "With 7 years of experience as an electromechanical engineer, brings expertise in a wide range of electromechanical systems, enabling him to effectively contribute to project success through innovative solutions and meticulous attention to detail.",
       certifications: ["Project Management Professional Candidate"],
-      image: "https://randomuser.me/api/portraits/men/3.jpg",
+      color: "red",
     },
     {
       name: "Eman Asa'd",
@@ -97,7 +97,7 @@ const Team = () => {
         "Internal Audit Certified",
         "Good Manufacturing Practices (GMP) Training",
       ],
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      color: "pink",
     },
     {
       name: "Ali Al Mawajdeh",
@@ -106,7 +106,7 @@ const Team = () => {
       experience:
         "With 12 years of experience, Ali brings a wealth of expertise in financial management and analysis. With a strong foundation in accounting principles and a meticulous approach, Ali ensures financial records are accurate and up-to-date, providing valuable insights that drive strategic decision-making. Known for dedication to precision and proactive approach, helps optimize resources, streamline processes, and enhance financial transparency within the organization.",
       certifications: [],
-      image: "https://randomuser.me/api/portraits/men/4.jpg",
+      color: "indigo",
     },
   ];
 
@@ -145,45 +145,48 @@ const Team = () => {
           <div className="row g-4">
             {teamMembers.map((member, index) => (
               <div key={index} className="col-lg-6">
-                <div className="team-member-card">
+                <div className={`team-member-card ${member.color}`}>
                   <div className="member-header">
-                    <div className="member-image">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="img-fluid"
-                      />
+                    <div className={`member-icon-wrapper ${member.color}`}>
+                      <FaUserTie className="member-icon" />
                     </div>
                     <div className="member-info">
                       <h3 className="member-name">{member.name}</h3>
                       <p className="member-position">{member.position}</p>
-                      <div className="member-social">
-                        <a href="#" className="social-icon">
-                          <FaLinkedin />
-                        </a>
-                        <a href="#" className="social-icon">
-                          <FaEnvelope />
-                        </a>
-                      </div>
+                    </div>
+                    <div className="member-social">
+                      <a href="#" className="social-icon" title="LinkedIn">
+                        <FaLinkedin />
+                      </a>
+                      <a href="#" className="social-icon" title="Email">
+                        <FaEnvelope />
+                      </a>
                     </div>
                   </div>
 
                   <div className="member-details">
                     <div className="detail-section">
-                      <h5 className="detail-title">Education</h5>
+                      <div className="detail-title">
+                        <FaUserGraduate className="detail-icon" />
+                        <h5>Education</h5>
+                      </div>
                       <p className="detail-text">{member.education}</p>
                     </div>
 
                     <div className="detail-section">
-                      <h5 className="detail-title">Experience</h5>
+                      <div className="detail-title">
+                        <FaBriefcase className="detail-icon" />
+                        <h5>Experience</h5>
+                      </div>
                       <p className="detail-text">{member.experience}</p>
                     </div>
 
                     {member.certifications.length > 0 && (
                       <div className="detail-section">
-                        <h5 className="detail-title">
-                          Certifications & Training
-                        </h5>
+                        <div className="detail-title">
+                          <FaCertificate className="detail-icon" />
+                          <h5>Certifications & Training</h5>
+                        </div>
                         <ul className="certifications-list">
                           {member.certifications.map((cert, idx) => (
                             <li key={idx}>{cert}</li>

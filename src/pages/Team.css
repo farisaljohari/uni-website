@@ -1,9 +1,44 @@
 @import "../styles/colors.css";
 
+/* Color Themes */
+:root {
+    --color-blue-light: #e3f2fd;
+    --color-blue-main: #2196f3;
+    --color-blue-dark: #1976d2;
+
+    --color-teal-light: #e0f2f1;
+    --color-teal-main: #26a69a;
+    --color-teal-dark: #00897b;
+
+    --color-purple-light: #f3e5f5;
+    --color-purple-main: #ab47bc;
+    --color-purple-dark: #8e24aa;
+
+    --color-green-light: #e8f5e9;
+    --color-green-main: #66bb6a;
+    --color-green-dark: #43a047;
+
+    --color-orange-light: #fff3e0;
+    --color-orange-main: #ff9800;
+    --color-orange-dark: #f57c00;
+
+    --color-red-light: #ffebee;
+    --color-red-main: #ef5350;
+    --color-red-dark: #e53935;
+
+    --color-pink-light: #fce4ec;
+    --color-pink-main: #ec407a;
+    --color-pink-dark: #d81b60;
+
+    --color-indigo-light: #e8eaf6;
+    --color-indigo-main: #5c6bc0;
+    --color-indigo-dark: #3949ab;
+}
+
 /* Team Introduction */
 .team-intro {
     padding: 80px 0;
-    background: var(--color-white);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .section-title {
@@ -21,124 +56,240 @@
 
 /* Team Grid Section */
 .team-grid-section {
-    padding: 40px 0 80px;
-    background: var(--color-light-gray);
+    padding: 60px 0 100px;
+    background: #f8f9fa;
 }
 
 .team-member-card {
     background: var(--color-white);
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
     height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--color-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    position: relative;
+}
+
+.team-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--card-color-main), var(--card-color-dark));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.team-member-card:hover::before {
+    transform: scaleX(1);
 }
 
 .team-member-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 69, 138, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Color-specific card variables */
+.team-member-card.blue {
+    --card-color-light: var(--color-blue-light);
+    --card-color-main: var(--color-blue-main);
+    --card-color-dark: var(--color-blue-dark);
+}
+
+.team-member-card.teal {
+    --card-color-light: var(--color-teal-light);
+    --card-color-main: var(--color-teal-main);
+    --card-color-dark: var(--color-teal-dark);
+}
+
+.team-member-card.purple {
+    --card-color-light: var(--color-purple-light);
+    --card-color-main: var(--color-purple-main);
+    --card-color-dark: var(--color-purple-dark);
+}
+
+.team-member-card.green {
+    --card-color-light: var(--color-green-light);
+    --card-color-main: var(--color-green-main);
+    --card-color-dark: var(--color-green-dark);
+}
+
+.team-member-card.orange {
+    --card-color-light: var(--color-orange-light);
+    --card-color-main: var(--color-orange-main);
+    --card-color-dark: var(--color-orange-dark);
+}
+
+.team-member-card.red {
+    --card-color-light: var(--color-red-light);
+    --card-color-main: var(--color-red-main);
+    --card-color-dark: var(--color-red-dark);
+}
+
+.team-member-card.pink {
+    --card-color-light: var(--color-pink-light);
+    --card-color-main: var(--color-pink-main);
+    --card-color-dark: var(--color-pink-dark);
+}
+
+.team-member-card.indigo {
+    --card-color-light: var(--color-indigo-light);
+    --card-color-main: var(--color-indigo-main);
+    --card-color-dark: var(--color-indigo-dark);
+}
+
+/* Member Header */
 .member-header {
+    padding: 35px 30px;
+    background: linear-gradient(135deg, var(--card-color-light) 0%, rgba(255, 255, 255, 0.9) 100%);
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 30px;
-    background: linear-gradient(135deg, rgba(0, 69, 138, 0.05), rgba(52, 152, 219, 0.05));
-    border-bottom: 2px solid var(--color-accent);
+    position: relative;
+    border-bottom: 2px solid var(--card-color-light);
 }
 
-.member-image {
-    width: 120px;
-    height: 120px;
+.member-icon-wrapper {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid var(--color-accent);
+    background: linear-gradient(135deg, var(--card-color-main), var(--card-color-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.member-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.team-member-card:hover .member-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.member-icon {
+    font-size: 2.5rem;
+    color: white;
+    z-index: 1;
+    position: relative;
 }
 
 .member-info {
     flex: 1;
+    min-width: 0;
 }
 
 .member-name {
     font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--color-primary);
+    font-weight: 800;
+    color: var(--color-dark);
     margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .member-position {
-    font-size: 1.1rem;
-    color: var(--color-secondary);
+    font-size: 1.05rem;
+    color: var(--card-color-dark);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 0;
+    padding: 6px 16px;
+    background: var(--card-color-light);
+    border-radius: 20px;
+    display: inline-block;
 }
 
 .member-social {
     display: flex;
-    gap: 12px;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--color-accent);
-    color: var(--color-primary);
+    width: 42px;
+    height: 42px;
+    background: white;
+    color: var(--card-color-main);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--card-color-light);
 }
 
 .social-icon:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--card-color-main);
+    color: white;
     transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Member Details */
 .member-details {
-    padding: 30px;
+    padding: 35px 30px;
 }
 
 .detail-section {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .detail-section:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .detail-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
-.detail-title::before {
-    content: "";
-    width: 4px;
-    height: 20px;
-    background: var(--color-accent);
+.detail-icon {
+    font-size: 1.4rem;
+    color: var(--card-color-main);
+    flex-shrink: 0;
+}
+
+.detail-title h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 0;
 }
 
 .detail-text {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--color-text);
+    color: #555;
+    margin: 0;
 }
 
 .certifications-list {
@@ -148,67 +299,107 @@
 }
 
 .certifications-list li {
-    padding: 8px 0;
-    padding-left: 25px;
+    padding: 10px 0 10px 30px;
     position: relative;
-    color: var(--color-text);
+    color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 .certifications-list li::before {
     content: "✓";
-    color: var(--color-accent);
+    color: var(--card-color-main);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 8px;
+}
+
+.certifications-list li:hover {
+    padding-left: 35px;
+    color: var(--color-dark);
 }
 
 /* Team CTA */
 .team-cta {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.team-cta .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
     color: var(--color-white);
     margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cta-text {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--color-light-gray);
+    color: rgba(255, 255, 255, 0.95);
     max-width: 700px;
     margin: 0 auto 40px;
 }
 
 .btn-cta-team {
-    background: var(--color-accent);
-    color: var(--color-primary);
-    padding: 15px 40px;
+    background: white;
+    color: #667eea;
+    padding: 16px 45px;
     font-size: 1.1rem;
     font-weight: 700;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .btn-cta-team:hover {
-    background: var(--color-hover-accent);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    background: var(--color-accent);
     color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .member-name {
+        font-size: 1.6rem;
+    }
+
+    .member-icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member-icon {
+        font-size: 2.2rem;
+    }
+}
+
 @media (max-width: 992px) {
     .section-title,
     .cta-title {
@@ -224,6 +415,14 @@
     .team-cta {
         padding: 60px 0;
     }
+
+    .member-header {
+        padding: 30px 25px;
+    }
+
+    .member-details {
+        padding: 30px 25px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -235,12 +434,13 @@
     .member-header {
         flex-direction: column;
         text-align: center;
-        padding: 25px;
+        padding: 30px 20px;
+        gap: 15px;
     }
 
-    .member-image {
-        width: 100px;
-        height: 100px;
+    .member-icon-wrapper {
+        width: 85px;
+        height: 85px;
     }
 
     .member-name {
@@ -253,9 +453,53 @@
 
     .member-social {
         justify-content: center;
+        margin-top: 10px;
     }
 
     .member-details {
         padding: 25px 20px;
+    }
+
+    .detail-section {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+
+    .team-intro,
+    .team-grid-section {
+        padding: 50px 0;
+    }
+
+    .team-cta {
+        padding: 70px 0;
+    }
+
+    .cta-title {
+        font-size: 1.6rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .member-icon-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+
+    .member-icon {
+        font-size: 2rem;
+    }
+
+    .member-name {
+        font-size: 1.3rem;
+    }
+
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
     }
 }

@@ -16,38 +16,26 @@ const Quality = () => {
   const certifications = [
     {
       name: "ISO 9001",
-      status: "Certified / Candidate",
+      status: "Candidate",
       description: "Quality Management Systems",
       icon: <FaCertificate />,
     },
     {
       name: "ISO 17025",
-      status: "Certified / Candidate",
+      status: "Certified",
       description: "Testing and Calibration Laboratories",
       icon: <FaCertificate />,
     },
     {
-      name: "ISO 45001",
-      status: "Certified",
-      description: "Occupational Health and Safety Management",
-      icon: <FaCertificate />,
-    },
-    {
-      name: "ISO 13485",
-      status: "Trained",
-      description: "Medical Devices Quality Management",
-      icon: <FaCertificate />,
-    },
-    {
-      name: "ISO 14001",
-      status: "Familiar",
-      description: "Environmental Management Systems",
-      icon: <FaCertificate />,
-    },
-    {
       name: "NEBB",
-      status: "Candidate",
+      status: "",
       description: "Building Performance Standards",
+      icon: <FaCertificate />,
+    },
+    {
+      name: "GEP",
+      status: "Candidate",
+      description: "Good Engineering Practices",
       icon: <FaCertificate />,
     },
   ];
@@ -179,7 +167,7 @@ const Quality = () => {
                   <div className="cert-icon">{cert.icon}</div>
                   <h3 className="cert-name">{cert.name}</h3>
                   <p className="cert-description">{cert.description}</p>
-                  <span className="cert-status">{cert.status}</span>
+                  {cert.status && <span className="cert-status">{cert.status}</span>}
                 </div>
               </div>
             ))}

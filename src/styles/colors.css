@@ -7,10 +7,8 @@
     --color-secondary-rgb: 52, 152, 219;
     --color-secondary-g: #d5e3eb;
     /* Light Blue */
-    --color-accent: #67bed9;
-    /* Light Blue Accent */
-    --color-yellow-accent: #ffd700;
-    /* Gold - for small highlights only */
+    --color-accent: #ffd700;
+    /* Gold */
     --color-white: #ffffff;
     --color-dark: #002b5b;
     /* Dark Blue */
@@ -25,7 +23,7 @@
     /* Border Color */
     --color-bright-blue: #167dbb;
     /* Bright Blue */
-    --color-hover-accent: #a8dbe9;
-    /* Light Blue Hover */
+    --color-hover-accent: #f3eab5;
+    /* Light Gold */
     --color-footer-bg: #6c757d;
 }

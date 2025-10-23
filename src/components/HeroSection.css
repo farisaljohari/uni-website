@@ -19,7 +19,7 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 50%, rgba(103, 190, 217, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
@@ -55,14 +55,14 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(103, 190, 217, 0.15);
+    background: rgba(255, 215, 0, 0.15);
     border: 2px solid var(--color-accent);
     padding: 8px 20px;
     border-radius: 30px;
     margin-bottom: 12px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--color-accent);
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -70,11 +70,11 @@
 
     0%,
     100% {
-        box-shadow: 0 0 0 0 rgba(103, 190, 217, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
     }
 
     50% {
-        box-shadow: 0 0 0 10px rgba(103, 190, 217, 0);
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
     }
 }
 
@@ -142,14 +142,14 @@
     background: rgba(255, 255, 255, 0.2);
     border-color: var(--color-accent);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(103, 190, 217, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
 }
 
 .highlight-icon {
     width: 32px;
     height: 32px;
     background: var(--color-accent);
-    color: var(--color-white);
+    color: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -187,9 +187,9 @@
 }
 
 .btn-hero-primary {
-    background: linear-gradient(135deg, var(--color-accent), #4a9ec4);
-    color: var(--color-white);
-    box-shadow: 0 8px 25px rgba(103, 190, 217, 0.4);
+    background: linear-gradient(135deg, var(--color-accent), #f0c800);
+    color: var(--color-primary);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
 }
 
 .btn-hero-primary::before {
@@ -199,7 +199,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #4a9ec4, var(--color-accent));
+    background: linear-gradient(135deg, #f0c800, var(--color-accent));
     transition: left 0.4s ease;
     z-index: -1;
 }
@@ -210,7 +210,7 @@
 
 .btn-hero-primary:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(103, 190, 217, 0.6);
+    box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6);
     color: var(--color-primary);
 }
 

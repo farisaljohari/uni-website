@@ -127,9 +127,9 @@
 
 .footer-contact-item:hover .footer-contact-icon {
     background: var(--color-accent);
-    color: var(--color-white);
+    color: var(--color-primary);
     transform: rotate(10deg) scale(1.05);
-    box-shadow: 0 5px 15px rgba(103, 190, 217, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
 /* Social Icons */
@@ -155,10 +155,10 @@
 
 .footer-socials a:hover {
     background: var(--color-accent);
-    color: var(--color-white);
+    color: var(--color-primary);
     transform: translateY(-5px) rotate(10deg);
     border-color: var(--color-accent);
-    box-shadow: 0 8px 20px rgba(103, 190, 217, 0.4);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
 }
 
 /* Quick Links */
@@ -260,7 +260,7 @@
     outline: none;
     border-color: var(--color-accent);
     background-color: var(--color-white);
-    box-shadow: 0 0 0 3px rgba(103, 190, 217, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
 }
 
 .footer-form textarea {
@@ -269,8 +269,8 @@
 }
 
 .footer-form button {
-    background: linear-gradient(135deg, var(--color-accent), #4a9ec4);
-    color: var(--color-white);
+    background: linear-gradient(135deg, var(--color-accent), #f0c800);
+    color: var(--color-primary);
     font-weight: 700;
     padding: 14px 30px;
     border: none;
@@ -278,12 +278,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(103, 190, 217, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .footer-form button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(103, 190, 217, 0.5);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
 }
 
 /* === Footer Bottom === */
@@ -293,7 +293,7 @@
     text-align: center;
     font-size: 0.9rem;
     color: var(--color-white);
-    border-top: 3px solid var(--color-yellow-accent);
+    border-top: 3px solid var(--color-accent);
 }
 
 .footer-bottom p {
@@ -312,15 +312,15 @@
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--color-accent), #4a9ec4);
-    color: var(--color-white);
+    background: linear-gradient(135deg, var(--color-accent), #f0c800);
+    color: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(103, 190, 217, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
     transition: all 0.3s ease;
     z-index: 999;
     opacity: 0;
@@ -347,7 +347,7 @@
 
 .scroll-to-top:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(103, 190, 217, 0.6);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
 }
 
 /* Responsive Design */

@@ -191,7 +191,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--color-accent), #f0c800);
+    background: linear-gradient(135deg, var(--color-accent), #2980b9);
     transition: left 0.4s ease;
     z-index: -1;
 }
@@ -202,7 +202,7 @@
 
 .btn-contact:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(52, 152, 219, 0.4);
     color: var(--color-primary);
 }
 

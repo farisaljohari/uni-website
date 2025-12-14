@@ -99,15 +99,6 @@ const Team = () => {
       ],
       color: "pink",
     },
-    {
-      name: "Ali Al Mawajdeh",
-      position: "Accounting Manager",
-      education: "Finance",
-      experience:
-        "With 12 years of experience, Ali brings a wealth of expertise in financial management and analysis. With a strong foundation in accounting principles and a meticulous approach, Ali ensures financial records are accurate and up-to-date, providing valuable insights that drive strategic decision-making. Known for dedication to precision and proactive approach, helps optimize resources, streamline processes, and enhance financial transparency within the organization.",
-      certifications: [],
-      color: "indigo",
-    },
   ];
 
   return (

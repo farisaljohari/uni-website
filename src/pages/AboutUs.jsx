@@ -94,19 +94,13 @@ const AboutUs = () => {
             <div className="col-lg-6">
               <h2 className="section-title">Our Profile</h2>
               <p className="profile-text">
-                At UniJO, we are passionate about advancing the pharmaceutical
-                industry through innovation and expertise. Founded in{" "}
-                <strong>2020</strong>, our team of dedicated professionals
-                specializes in providing comprehensive consulting services,
-                sourcing high-quality medical and pharmaceutical supplies, and
-                designing projects that comply with international standards.
-              </p>
-              <p className="profile-text">
-                We pride ourselves on our customer-centric approach, working
-                closely with our clients to deliver tailored solutions that
-                drive success. Whether you're looking for expert guidance or
-                reliable products, we are here to support your goals and enhance
-                your operational efficiency.
+                Since 2019, UniJO has been providing pharmaceutical industries
+                with innovative engineering, consulting, and cleanroom solutions
+                to meet global standards and to support full regulatory
+                compliance. Our customer-focused approach allows us to provide
+                tailored solutions that enhance their pharmaceutical operations
+                by combining deep industry expertise, high-quality sourcing
+                capabilities, and reliable turnkey project execution.
               </p>
             </div>
           </div>

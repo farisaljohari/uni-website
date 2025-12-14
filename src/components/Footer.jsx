@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaArrowUp, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo_UNIVAL.png";
 import "./Footer.css";
 
 export default function Footer() {
@@ -28,15 +27,8 @@ export default function Footer() {
       <footer className="uba-footer" id="contact">
         <div className="footer-content">
           {/* Left Section */}
-          <div className="footer-column logo-column">
-            <img src={logo} alt="UniJO" className="footer-logo" />
-            <p className="footer-text">
-              At UniJO, we advance the pharmaceutical industry through
-              innovative solutions, cleanroom turnkey projects, and specialized
-              engineering services, ensuring quality, compliance, and
-              operational excellence.
-            </p>
-
+          <div className="footer-column social-column">
+            <h4 className="footer-heading">Follow Us</h4>
             <div className="footer-socials">
               <a
                 href="https://www.facebook.com/share/1793vypo3K/"

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { BsClipboardCheck } from "react-icons/bs";
-import { FaArrowRight, FaIndustry } from "react-icons/fa";
+import { FaIndustry } from "react-icons/fa";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import { Link } from "react-router-dom";
 import "./HeroSection.css";
 import WorldMap from "./WorldMap";
 
@@ -22,43 +21,43 @@ const HeroSection = () => {
       <div className="hero-background-overlay"></div>
       <div className="container hero-content">
         <div className={`hero-text ${isVisible ? "fade-in" : ""}`}>
-          <div className="hero-badge">
-            <span>Welcome to UniJO</span>
-          </div>
           <h1 className="hero-title">
-            Advancing the{" "}
-            <span className="highlight-text">Pharmaceutical Industry</span>
-            <br /> through Innovation & Expertise
+            Engineering Solution for
+            <br />
+            Pharmaceutical Industry
           </h1>
           <p className="hero-description">
-            At UniJO, we deliver cleanroom and engineering solutions tailored
-            to pharmaceutical standards. From consulting and project design to
-            turnkey implementation, we are your partner in success.
+            At UniJO, we deliver cleanroom and turnkey solutions tailored to
+            pharmaceutical standards.
           </p>
           <div className="hero-highlights">
-            <div className="highlight">
-              <div className="highlight-icon">
+            <div className="highlight-card">
+              <div className="highlight-icon-wrapper">
                 <HiOutlineLightBulb />
               </div>
-              <span>Innovation</span>
+              <div className="highlight-content">
+                <span className="highlight-title">Innovation</span>
+                <span className="highlight-subtitle">Creative Solutions</span>
+              </div>
             </div>
-            <div className="highlight">
-              <div className="highlight-icon">
+            <div className="highlight-card">
+              <div className="highlight-icon-wrapper">
                 <FaIndustry />
               </div>
-              <span>GMP Design</span>
+              <div className="highlight-content">
+                <span className="highlight-title">GMP Design</span>
+                <span className="highlight-subtitle">Industry Standards</span>
+              </div>
             </div>
-            <div className="highlight">
-              <div className="highlight-icon">
+            <div className="highlight-card">
+              <div className="highlight-icon-wrapper">
                 <BsClipboardCheck />
               </div>
-              <span>Compliance</span>
+              <div className="highlight-content">
+                <span className="highlight-title">Compliance</span>
+                <span className="highlight-subtitle">Quality Assured</span>
+              </div>
             </div>
-          </div>
-          <div className="hero-cta-buttons">
-            <Link to="/contact" className="btn-hero-primary">
-              Get Started <FaArrowRight />
-            </Link>
           </div>
         </div>
         <div className={`hero-image ${isVisible ? "fade-in-right" : ""}`}>

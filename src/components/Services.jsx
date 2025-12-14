@@ -24,13 +24,13 @@ const services = [
   {
     title: "CONSULTATION",
     icon: <FaUserTie />,
-    description: "Expert advice to optimize operations and navigate challenges",
+    description: "Expert consulting to guide your pharmaceutical projects from concept to execution.",
     bgImage: consultationImg,
   },
   {
     title: "CLEANROOM SYSTEMS",
     icon: <FaFlask />,
-    description: "Complete calibration services for cleanroom facilities and equipment",
+    description: "Supply and apply cleanroom system.",
     bgImage: cleanroomImg,
   },
   {
@@ -40,15 +40,15 @@ const services = [
     bgImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
   },
   {
-    title: "VALIDATION & QUALIFICATION",
+    title: "VALIDATION, QUALIFICATION & CALIBRATION",
     icon: <FaCheckCircle />,
-    description: "Ensuring systems meet regulatory requirements and best practices",
+    description: "Precise qualification and validation of processes, equipment, and cleanroom environments. Performing precise calibration of instruments and equipment to guarantee accuracy.",
     bgImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80",
   },
   {
     title: "HVAC & UTILITIES",
     icon: <FaProjectDiagram />,
-    description: "Design and installation of critical utility systems",
+    description: "Designing and implementing advanced HVAC systems that ensure cleanroom integrity, environmental control, and regulatory-compliant air quality.",
     bgImage: hvacImg,
   },
   {
@@ -60,7 +60,7 @@ const services = [
   {
     title: "MAINTENANCE & CALIBRATION",
     icon: <FaTools />,
-    description: "Comprehensive maintenance to keep equipment at peak performance",
+    description: "Providing preventive and corrective maintenance services to ensure reliable performance and long-term equipment integrity.",
     bgImage: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80",
   },
   {
@@ -101,11 +101,6 @@ const Services = () => {
       <div className="services-wrapper text-center">
         <div className={`services-header ${isVisible ? "fade-in" : ""}`}>
           <h2 className="services-main-title">OUR SERVICES</h2>
-          <p className="services-desc">
-            Comprehensive solutions tailored to meet the diverse needs of the
-            pharmaceutical industry. From consultation to turnkey projects, we
-            deliver excellence at every stage.
-          </p>
         </div>
 
         <Swiper
@@ -138,15 +133,17 @@ const Services = () => {
                   style={{ backgroundImage: `url(${item.bgImage})` }}
                 ></div>
                 <div className="service-overlay">
-                  <div className="service-icon-wrapper">
-                    {item.icon}
+                  <div className="service-content">
+                    <div className="service-icon-wrapper">
+                      {item.icon}
+                    </div>
+                    <h5 className="service-title">{item.title}</h5>
+                    <p className="service-description">{item.description}</p>
+                    <Link to="/services" className="service-btn">
+                      Learn More
+                      <span className="btn-arrow">→</span>
+                    </Link>
                   </div>
-                  <h5 className="service-title">{item.title}</h5>
-                  <p className="service-description">{item.description}</p>
-                  <Link to="/services" className="service-btn">
-                    Learn More
-                    <span className="btn-arrow">→</span>
-                  </Link>
                 </div>
               </div>
             </SwiperSlide>

@@ -199,7 +199,7 @@
 .btn-cta:hover {
     background: var(--color-hover-accent);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
 }
 
 /* Responsive Design */

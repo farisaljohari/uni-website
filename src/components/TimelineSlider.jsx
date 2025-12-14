@@ -14,7 +14,7 @@ const timelineData = [
     logo: "/logos/UniJO-logo.png",
   },
   {
-    year: "2022",
+    year: "2021",
     title: "First Turnkey Project",
     desc: "Successfully executed a cleanroom turnkey solution for a pharmaceutical client.",
     logo: "/logos/cleanroom.png",
@@ -22,13 +22,13 @@ const timelineData = [
   {
     year: "2022",
     title: "ISO Certifications",
-    desc: "Began certification process for ISO 9001:2015 and ISO 17025:2017 standards.",
+    desc: "Began certification process for ISO 9001:2015 standards.",
     logo: "/logos/iso.png",
   },
   {
     year: "2023",
     title: "Global Partnerships",
-    desc: "Established partnerships with leading pharma machinery manufacturers in China and Europe.",
+    desc: "Established partnerships with leading pharmaceutical machinery manufacturers in China and Europe.",
     logo: "/logos/partnership.png",
   },
   {
@@ -36,12 +36,6 @@ const timelineData = [
     title: "Expansion in Middle East",
     desc: "Expanded market coverage across GCC and Middle Eastern countries.",
     logo: "/logos/expansion.png",
-  },
-  {
-    year: "2024",
-    title: "New Turnkey Projects",
-    desc: "Secured multiple full turnkey cleanroom and HVAC system projects.",
-    logo: "/logos/project.png",
   },
   {
     year: "2024",
@@ -85,7 +79,7 @@ export default function TimelineSlider() {
           OUR JOURNEY
         </h2>
         <p className={`timeline-subtitle ${isVisible ? "fade-in-delay" : ""}`}>
-          Discover our remarkable milestones and growth journey in the
+          Discover our key milestones and growth achievements in the
           pharmaceutical industry
         </p>
 

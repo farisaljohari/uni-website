@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -16,6 +16,12 @@ const Home = () => {
 
   const partners = [
     {
+      name: "UNIVAL China",
+      category: "Cleanroom Solutions",
+      image:
+        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
+    },
+    {
       name: "Veck (Tianjin) Co. Ltd.",
       category: "HVAC Systems",
       image:
@@ -28,26 +34,12 @@ const Home = () => {
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
     },
     {
-      name: "UniJO China",
-      category: "Cleanroom Solutions",
-      image:
-        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
-    },
-    {
       name: "STC",
       category: "Mixing & Granulation",
       image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&q=80",
     },
   ];
 
-  const whyChooseUs = [
-    "ISO 9001 & 17025 Certified / Candidate",
-    "15+ Years of Combined Team Experience",
-    "Global Partnerships with Leading Manufacturers",
-    "Full GMP & FDA Compliance",
-    "End-to-End Turnkey Solutions",
-    "Professional Engineering & Design Services",
-  ];
 
   return (
     <>
@@ -61,19 +53,13 @@ const Home = () => {
             <div className="col-lg-6">
               <h2 className="section-title">About UniJO</h2>
               <p className="profile-text">
-                At UniJO, we are passionate about advancing the pharmaceutical
-                industry through innovation and expertise. Founded in{" "}
-                <strong>2020</strong>, our team of dedicated professionals
-                specializes in providing comprehensive consulting services,
-                sourcing high-quality medical and pharmaceutical supplies, and
-                designing projects that comply with international standards.
-              </p>
-              <p className="profile-text">
-                We pride ourselves on our customer-centric approach, working
-                closely with our clients to deliver tailored solutions that
-                drive success. Whether you're looking for expert guidance or
-                reliable products, we are here to support your goals and enhance
-                your operational efficiency.
+                Since 2019, UniJO has been providing pharmaceutical industries
+                with innovative engineering, consulting, and cleanroom solutions
+                to meet global standards and to support full regulatory
+                compliance. Our customer-focused approach allows us to provide
+                tailored solutions that enhance their pharmaceutical operations
+                by combining deep industry expertise, high-quality sourcing
+                capabilities, and reliable turnkey project execution.
               </p>
               <Link to="/about" className="btn-learn-more">
                 Learn More About Us <FaArrowRight />
@@ -95,42 +81,6 @@ const Home = () => {
       <ValueProposition />
       <Services />
 
-      {/* Why Choose Us Section */}
-      <section className="home-why-choose">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="why-choose-image">
-                <img
-                  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
-                  alt="Quality Assurance"
-                  className="img-fluid rounded"
-                />
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <h2 className="section-title">Why Choose UniJO?</h2>
-              <p className="why-choose-intro">
-                With a trusted partner like UniJO, you gain an experienced team
-                committed to your success. We deliver projects that uphold the
-                highest standards of quality and regulatory compliance.
-              </p>
-              <ul className="why-choose-list">
-                {whyChooseUs.map((item, index) => (
-                  <li key={index}>
-                    <FaCheckCircle className="check-icon" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/quality" className="btn-learn-more">
-                Explore Our Certifications <FaArrowRight />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Partnerships Highlight */}
       <section className="home-partnerships">
         <div className="container">
@@ -138,7 +88,7 @@ const Home = () => {
             Our Global Partnerships
           </h2>
           <p className="text-center mb-5 partnerships-intro">
-            Through strategic partnerships with leading global manufacturers, we
+            Through strategic collaborations with leading international manufacturers, we
             deliver world-class solutions tailored to the pharmaceutical
             industry's unique needs.
           </p>

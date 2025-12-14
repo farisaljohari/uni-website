@@ -23,7 +23,7 @@
     font-size: 2.75rem;
     font-weight: 800;
     color: var(--color-primary);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
     display: inline-block;
 }
@@ -56,6 +56,22 @@
     gap: 15px;
 }
 
+/* 6-Card Grid Layout */
+.value-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box-text-subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
 /* Box Base Styles */
 .box {
     padding: 35px 25px;
@@ -82,7 +98,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), transparent);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -189,7 +205,7 @@
 }
 
 .dark-box .box-icon {
-    color: var(--color-accent);
+    color: var(--color-white);
 }
 
 .gray-box {
@@ -214,7 +230,11 @@
 }
 
 .blue-box .box-icon {
-    color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.blue-box .box-number {
+    color: var(--color-white);
 }
 
 .bright-blue {
@@ -243,7 +263,7 @@
 }
 
 .full-blue .box-icon {
-    color: var(--color-accent);
+    color: var(--color-white);
     font-size: 3rem;
 }
 
@@ -265,6 +285,11 @@
     .value-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+
+    .value-grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .box {
@@ -302,6 +327,11 @@
     }
 
     .value-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .value-grid-6 {
         grid-template-columns: 1fr;
         gap: 12px;
     }

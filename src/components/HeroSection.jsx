@@ -4,6 +4,7 @@ import { FaIndustry } from "react-icons/fa";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import "./HeroSection.css";
 import WorldMap from "./WorldMap";
+import mainDoorsImage from "../assets/main_doors.png";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero-section" id="home">
+    <section
+      className="hero-section"
+      id="home"
+      style={{ backgroundImage: `url(${mainDoorsImage})` }}
+    >
       <div className="hero-background-overlay"></div>
       <div className="container hero-content">
         <div className={`hero-text ${isVisible ? "fade-in" : ""}`}>

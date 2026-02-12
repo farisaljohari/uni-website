@@ -11,6 +11,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Override Bootstrap container to use full width */
+.container {
+  max-width: 100% !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

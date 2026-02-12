@@ -26,15 +26,17 @@ const HeroSection = () => {
       <div className="hero-background-overlay"></div>
       <div className="container hero-content">
         <div className={`hero-text ${isVisible ? "fade-in" : ""}`}>
-          <h1 className="hero-title">
-            Engineering Solution for
-            <br />
-            Pharmaceutical Industry
-          </h1>
-          <p className="hero-description">
-            At UniJO, we deliver cleanroom and turnkey solutions tailored to
-            pharmaceutical standards.
-          </p>
+          <div className="hero-text-backdrop">
+            <h1 className="hero-title">
+              Engineering Solution for
+              <br />
+              Pharmaceutical Industry
+            </h1>
+            <p className="hero-description">
+              At UniJO, we deliver cleanroom and turnkey solutions tailored to
+              pharmaceutical standards.
+            </p>
+          </div>
           <div className="hero-highlights">
             <div className="highlight-card">
               <div className="highlight-icon-wrapper">

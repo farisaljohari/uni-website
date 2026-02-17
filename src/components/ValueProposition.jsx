@@ -49,8 +49,7 @@ const ValueProposition = () => {
             <div className="box-icon">
               <FaCalendarAlt />
             </div>
-            <h3 className="box-number">2020</h3>
-            <p className="box-text">Year Established</p>
+            <h6 className="box-title">Founded in 2020</h6>
           </div>
 
           <div
@@ -86,10 +85,10 @@ const ValueProposition = () => {
             <div className="box-icon icon-primary">
               <FaAward />
             </div>
-            <h3 className="box-number">+15</h3>
-            <p className="box-text-subtitle">Years Expertise</p>
+            <h3 className="box-number">15+</h3>
+            <p className="box-text-subtitle">Years of Industry Expertise</p>
             <p className="box-text">
-              Experienced team with deep industry and engineering knowledge.
+              Experienced professionals with deep pharmaceutical engineering knowledge.
             </p>
           </div>
 
@@ -113,9 +112,9 @@ const ValueProposition = () => {
             <div className="box-icon">
               <FaCertificate />
             </div>
-            <h6 className="box-title">ISO Certified & End-to-End Solution</h6>
+            <h6 className="box-title">ISO Certified End-to-End Solution</h6>
             <p className="box-text">
-              Aligned with ISO 9001 & 17025, delivering full turnkey services.
+              Aligned with ISO 9001 & 17025, delivering complete GMP turnkey solution.
             </p>
           </div>
         </div>

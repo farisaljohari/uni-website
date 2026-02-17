@@ -16,27 +16,24 @@ const Home = () => {
 
   const partners = [
     {
-      name: "UNIVAL China",
-      category: "Cleanroom Solutions",
-      image:
-        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
-    },
-    {
       name: "Veck (Tianjin) Co. Ltd.",
       category: "HVAC Systems",
-      image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
+      image: require("../assets/veck.jpeg"),
     },
     {
-      name: "SHINVA Pharmaceutical",
+      name: "UniJO China",
+      category: "Cleanroom Solutions",
+      image: require("../assets/Unival China.png"),
+    },
+    {
+      name: "SHINVA Pharmaceutical Technology Group",
       category: "Pharmaceutical Machinery",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+      image: require("../assets/shinva.png"),
     },
     {
       name: "STC",
       category: "Mixing & Granulation",
-      image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&q=80",
+      image: require("../assets/stc.png"),
     },
   ];
 

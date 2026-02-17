@@ -11,6 +11,7 @@ const Products = () => {
       partner: "Veck (Tianjin) Co. Ltd.",
       category: "HVAC Systems",
       icon: <FaIndustry />,
+      image: require("../assets/veck.jpeg"),
       description:
         "In partnership with Veck (Tianjin) Co. Ltd., we offer a comprehensive range of HVAC systems to create clean and comfortable environments for our customers.",
       products: [
@@ -28,6 +29,7 @@ const Products = () => {
       partner: "UniJO China",
       category: "Cleanroom Solutions",
       icon: <FaBoxes />,
+      image: require("../assets/Unival China.png"),
       description:
         "In partnership with UniJO China, our company supplies specialized cleanroom solutions, including cleanroom sandwich panels, ceiling systems, cleanroom doors and windows, along with related products.",
       products: [
@@ -42,6 +44,7 @@ const Products = () => {
       partner: "SHINVA Pharmaceutical Technology Group",
       category: "Pharmaceutical Machinery",
       icon: <FaCog />,
+      image: require("../assets/shinva.png"),
       description:
         "In partnership with SHINVA Pharmaceutical Technology Group, we provide the pharmaceutical industry with engineering and design services for sterile injections, solid dosage forms, medicinal products, and biopharmaceuticals.",
       products: [
@@ -56,6 +59,7 @@ const Products = () => {
       partner: "STC",
       category: "Mixing & Granulation Equipment",
       icon: <FaCog />,
+      image: require("../assets/stc.png"),
       description:
         "In partnership with STC, we provide comprehensive solutions in mixing and granulation (powder pressing and multi-layer tableting technology) for pharmaceuticals, food, and cosmetic industries.",
       products: [
@@ -74,6 +78,7 @@ const Products = () => {
       partner: "Liaoning Tianyi Machinery Co., Ltd",
       category: "Capsule Filling Machines",
       icon: <FaPills />,
+      image: require("../assets/Tianyi.png"),
       description:
         "In partnership with Liaoning Tianyi Machinery Co., Ltd, we are equipped to deliver comprehensive services for the pharmaceutical industry, specializing in the development, manufacturing, sales, and after-sales support of advanced pharmaceutical machinery.",
       products: [
@@ -86,6 +91,7 @@ const Products = () => {
       partner: "Xiaolun United",
       category: "Various Pharmaceutical Equipment",
       icon: <FaCog />,
+      image: require("../assets/xiaolun.png"),
       description:
         "In partnership with Xiaolun United, we can provide high-quality pharmaceutical machinery and equipment designed to meet stringent pharmaceutical standards.",
       products: [
@@ -98,6 +104,7 @@ const Products = () => {
       partner: "Younker Packaging Technology Co., Ltd",
       category: "PVC Packaging Materials",
       icon: <FaBoxes />,
+      image: require("../assets/Younker.png"),
       description:
         "We provide PVC hard sheets for pharmaceutical and food packaging from our partner Younker Packaging Technology Co., Ltd, ensuring the highest domestic standards in the medicinal PVC industry.",
       products: [
@@ -110,6 +117,7 @@ const Products = () => {
       partner: "Changzhou Four Stars Glass Co., LTD",
       category: "Glass Packaging Solutions",
       icon: <FaVial />,
+      image: require("../assets/Changzhou.png"),
       description:
         "We provide a full range of high-quality glass packaging solutions from our partner Changzhou Four Stars Glass Co., LTD.",
       products: [
@@ -188,18 +196,7 @@ const Products = () => {
                 <div className={`col-lg-6 ${index % 2 === 1 ? "order-lg-1" : ""}`}>
                   <div className="partnership-image-placeholder">
                     <img
-                      src={`https://images.unsplash.com/photo-${
-                        [
-                          "1581092160562-40aa08e78837",
-                          "1581092918056-0c4c3acd3789",
-                          "1581091226825-a6a2a5aee158",
-                          "1585435557343-3b092031a831",
-                          "1587825140708-dfaf72ae4b04",
-                          "1586528116311-ad8dd3c8310d",
-                          "1584308666744-24d5c474f2ae",
-                          "1631549916768-4119b2e5f926",
-                        ][index % 8]
-                      }?w=600&q=80`}
+                      src={partnership.image}
                       alt={partnership.partner}
                       className="img-fluid rounded"
                     />

@@ -43,6 +43,12 @@ const timelineData = [
     desc: "Advanced qualification process to achieve NEBB compliance for cleanroom validation.",
     logo: "/logos/nebb.png",
   },
+  {
+    year: "2025",
+    title: "ISO Certification",
+    desc: "Accredited ISO 17025:2017 standards.",
+    logo: "/logos/iso.png",
+  },
 ];
 
 export default function TimelineSlider() {
@@ -58,7 +64,7 @@ export default function TimelineSlider() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {

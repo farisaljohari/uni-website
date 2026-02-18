@@ -93,16 +93,19 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 12px 30px;
 }
 
 .footer-links li {
-    margin-bottom: 12px;
     transform: translateX(0);
     transition: transform 0.3s ease;
 }
 
 .footer-links li:hover {
-    transform: translateX(10px);
+    transform: translateX(6px);
 }
 
 .footer-links a {
@@ -142,12 +145,13 @@
 .footer-form .form-row {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .footer-form input,
 .footer-form textarea {
     flex: 1;
+    min-width: 0;
     padding: 12px 15px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
@@ -168,6 +172,11 @@
     border-color: var(--color-accent);
     background-color: var(--color-white);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.footer-form .form-full {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-form textarea {

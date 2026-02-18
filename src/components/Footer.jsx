@@ -82,10 +82,10 @@ export default function Footer() {
               <div className="form-row">
                 <input type="text" placeholder="First Name *" required />
                 <input type="text" placeholder="Last Name *" required />
-                <input type="text" placeholder="Company *" required />
+                <input type="email" placeholder="Email *" required />
               </div>
               <div className="form-row">
-                <input type="email" placeholder="Email *" required />
+                <input type="text" placeholder="Company *" required />
                 <input type="text" placeholder="Phone/Mobile *" required />
               </div>
               <textarea placeholder="Your Message *" required></textarea>

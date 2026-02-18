@@ -21,7 +21,7 @@ const Home = () => {
       image: require("../assets/veck.jpeg"),
     },
     {
-      name: "UniJO China",
+      name: "Unival China",
       category: "Cleanroom Solutions",
       image: require("../assets/Unival China.png"),
     },
@@ -36,7 +36,6 @@ const Home = () => {
       image: require("../assets/stc.png"),
     },
   ];
-
 
   return (
     <>
@@ -85,9 +84,9 @@ const Home = () => {
             Our Global Partnerships
           </h2>
           <p className="text-center mb-5 partnerships-intro">
-            Through strategic collaborations with leading international manufacturers, we
-            deliver world-class solutions tailored to the pharmaceutical
-            industry's unique needs.
+            Through strategic collaborations with leading international
+            manufacturers, we deliver world-class solutions tailored to the
+            pharmaceutical industry's unique needs.
           </p>
           <div className="row g-4">
             {partners.map((partner, index) => (

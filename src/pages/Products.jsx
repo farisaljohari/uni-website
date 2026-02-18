@@ -1,9 +1,8 @@
-import React from "react";
+import { FaBoxes, FaCog, FaIndustry, FaPills, FaVial } from "react-icons/fa";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PageHero from "../components/PageHero";
-import Footer from "../components/Footer";
 import "./Products.css";
-import { FaIndustry, FaBoxes, FaCog, FaPills, FaVial } from "react-icons/fa";
 
 const Products = () => {
   const partnerships = [
@@ -26,12 +25,12 @@ const Products = () => {
       ],
     },
     {
-      partner: "UniJO China",
+      partner: "Unival China",
       category: "Cleanroom Solutions",
       icon: <FaBoxes />,
       image: require("../assets/Unival China.png"),
       description:
-        "In partnership with UniJO China, our company supplies specialized cleanroom solutions, including cleanroom sandwich panels, ceiling systems, cleanroom doors and windows, along with related products.",
+        "In partnership with Unival China, our company supplies specialized cleanroom solutions, including cleanroom sandwich panels, ceiling systems, cleanroom doors and windows, along with related products.",
       products: [
         "Cleanroom sandwich panels",
         "Ceiling systems",
@@ -137,10 +136,7 @@ const Products = () => {
       <PageHero
         title="Products & Partnerships"
         subtitle="Delivering Excellence Through Global Collaboration"
-        breadcrumbs={[
-          { label: "Home", link: "/" },
-          { label: "Products" },
-        ]}
+        breadcrumbs={[{ label: "Home", link: "/" }, { label: "Products" }]}
       />
 
       {/* Introduction Section */}
@@ -152,10 +148,11 @@ const Products = () => {
                 Products, Services, and Business Partnerships
               </h2>
               <p className="intro-text">
-                Through strategic partnerships with leading global manufacturers,
-                we deliver comprehensive solutions tailored to the pharmaceutical
-                industry's unique needs. Our partnerships ensure access to
-                world-class equipment, materials, and technology.
+                Through strategic partnerships with leading global
+                manufacturers, we deliver comprehensive solutions tailored to
+                the pharmaceutical industry's unique needs. Our partnerships
+                ensure access to world-class equipment, materials, and
+                technology.
               </p>
             </div>
           </div>
@@ -168,12 +165,12 @@ const Products = () => {
           {partnerships.map((partnership, index) => (
             <div
               key={index}
-              className={`partnership-item ${
-                index % 2 === 0 ? "even" : "odd"
-              }`}
+              className={`partnership-item ${index % 2 === 0 ? "even" : "odd"}`}
             >
               <div className="row align-items-center">
-                <div className={`col-lg-6 ${index % 2 === 1 ? "order-lg-2" : ""}`}>
+                <div
+                  className={`col-lg-6 ${index % 2 === 1 ? "order-lg-2" : ""}`}
+                >
                   <div className="partnership-content">
                     <div className="partnership-icon">{partnership.icon}</div>
                     <h3 className="partnership-name">{partnership.partner}</h3>
@@ -193,7 +190,9 @@ const Products = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`col-lg-6 ${index % 2 === 1 ? "order-lg-1" : ""}`}>
+                <div
+                  className={`col-lg-6 ${index % 2 === 1 ? "order-lg-1" : ""}`}
+                >
                   <div className="partnership-image-placeholder">
                     <img
                       src={partnership.image}

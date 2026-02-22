@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import PageHero from "../components/PageHero";
 import Footer from "../components/Footer";
 import "./AboutUs.css";
+import ourCoreImg from "../assets/our-core.jpg";
 import {
   FaShieldAlt,
   FaStar,
@@ -17,31 +18,31 @@ const AboutUs = () => {
       icon: <FaShieldAlt />,
       title: "Integrity",
       description:
-        "We operate with honesty and transparency, ensuring that our clients can trust our services and solutions.",
+        "We operate with honesty and transparency, from regulatory compliance to client communication to fulfill their requirements.",
     },
     {
       icon: <FaStar />,
       title: "Quality",
       description:
-        "We are committed to delivering the highest quality in all our services and products, adhering to international standards.",
+        "We are committed to deliver the highest quality in all our services and products, adhering to international standards.",
     },
     {
       icon: <FaLightbulb />,
       title: "Innovation",
       description:
-        "We embrace creativity and innovation, continually seeking new ways to improve and adapt to industry changes.",
+        "We continuously seek for innovative, more effective solutions to evolve with industry demands and market changes.",
     },
     {
       icon: <FaUsers />,
       title: "Customer-Centric Approach",
       description:
-        "Our clients are at the heart of everything we do. We listen to their needs and tailor our services to meet their expectations.",
+        "In order to meet customer's expectations, we deliver personalized solutions built on trust and long-term value.",
     },
     {
       icon: <FaHandshake />,
       title: "Collaboration",
       description:
-        "We believe in the power of teamwork and collaboration, both within our team and with our clients, to achieve shared goals.",
+        "As strong collaboration drives success, we collaborate internally and with our clients to achieve shared goals.",
     },
   ];
 
@@ -108,16 +109,26 @@ const AboutUs = () => {
       </section>
 
       {/* Core Values Section */}
-      <section className="core-values">
+      <section
+        className="core-values"
+        style={{ backgroundImage: `url(${ourCoreImg})` }}
+      >
         <div className="container">
           <h2 className="section-title text-center mb-5">Our Core Values</h2>
           <div className="row g-4">
             {values.map((value, index) => (
               <div key={index} className="col-md-6 col-lg-4">
-                <div className="value-card">
-                  <div className="value-icon">{value.icon}</div>
-                  <h4 className="value-title">{value.title}</h4>
-                  <p className="value-description">{value.description}</p>
+                <div className="value-card-flip">
+                  <div className="value-card-inner">
+                    <div className="value-card-front">
+                      <div className="value-icon">{value.icon}</div>
+                      <h4 className="value-title">{value.title}</h4>
+                    </div>
+                    <div className="value-card-back">
+                      <h4 className="value-title">{value.title}</h4>
+                      <p className="value-description">{value.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

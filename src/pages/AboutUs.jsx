@@ -115,9 +115,9 @@ const AboutUs = () => {
       >
         <div className="container">
           <h2 className="section-title text-center mb-5">Our Core Values</h2>
-          <div className="row g-4">
+          <div className="row g-4 values-row">
             {values.map((value, index) => (
-              <div key={index} className="col-md-6 col-lg-4">
+              <div key={index} className="col value-col">
                 <div className="value-card-flip">
                   <div className="value-card-inner">
                     <div className="value-card-front">
